@@ -32,5 +32,17 @@ print("valami "*3)
 #hatványozás
 print(2**2)
 
+# változók
+# pythonban a típus hozzárendelés
+# automatikus
+a="valami"
+b="bármi"
 
+print(a)
+
+print(a+b)
+
+c=int(input())
+
+print(c)
 
