@@ -28,32 +28,4 @@ b=2
 
 # értékadó utasítások
 
-#a=a+b
-a+=b
-print(a)
-
-a-=b
-print(a)
-
-a*=b
-print(a)
-
-a/=b
-print(a)
-
-print("A:")
-a=float(input())
-
-print("B:")
-b=float(input())
-
-print(a+b)
-
-print(a==b)
-print(a!=b)
-print(a>b)
-print(a<b)
-print(a>=b)
-print(a<=b)
-
 
