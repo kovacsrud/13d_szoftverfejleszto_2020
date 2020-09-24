@@ -57,3 +57,12 @@ a*=b
 a-=b
 a/=b
 ```
+### Bevitel a felhasználótól, az input() függvény
+
+Alaphelyzetben az input() szöveges adatot tesz a változóba.
+```c#
+a=input()
+b=input()
+
+print(a+b)
+```
