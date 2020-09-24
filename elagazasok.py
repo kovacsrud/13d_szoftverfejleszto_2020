@@ -31,11 +31,16 @@ else:
     print("Valami más")        
     
 
-d=110
+d=30
 
 # Ha d értéke 50 és 200 között van
 # akkor az a szöveg jelenjen meg, hogy "megfelelő"
 # egyébként az hogy "nem megfelelő"
+
+if(d>50 and d<200):
+    print("Megfelelő")
+else:
+    print("Nem megfelelő")    
 
 
 
