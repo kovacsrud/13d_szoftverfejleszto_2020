@@ -66,3 +66,11 @@ b=input()
 
 print(a+b)
 ```
+### Bevitel egész típusú változóba
+Itt az int() függvény alakítja át a szöveges adatot szám típusúra.
+```python
+a=int(input())
+b=int(input())
+
+print(a+b)
+```
