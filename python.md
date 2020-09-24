@@ -108,4 +108,14 @@ if (a>0):
 else:
     print("A szám negatív!")   
 ```
+**Többszörös elágazás**
 
+```py
+a=0
+if (a>0):
+    print("A szám pozitív")
+elif(a==0):    
+    print("A szám nulla")
+else:
+    print("A szám negatív!")   
+```
