@@ -29,3 +29,56 @@ Hatványozás
 ```python
 print(2**2)
 ```
+### Változók
+
+A változók a memória valamely részét jelentik, ahol értéket tárolhatunk. A változót egy névvel azonosítjuk.
+
+```python
+a=10
+b=2
+```
+Pythonban a változók típusának beállítása automatikus, a változóba beírt érték típusa alapján végzi a nyelv.
+
+### Értékadó utasítások
+
+```python
+a=10
+b=2
+
+a=a+b
+a=a*b
+
+print(a)
+```
+**Értékadások rövidített formában**
+```python
+a+=b
+a*=b
+a-=b
+a/=b
+```
+### Bevitel a felhasználótól, az input() függvény
+
+Alaphelyzetben az input() szöveges adatot tesz a változóba.
+```c#
+a=input()
+b=input()
+
+print(a+b)
+```
+### Bevitel egész típusú változóba
+Itt az int() függvény alakítja át a szöveges adatot szám típusúra.
+```python
+a=int(input())
+b=int(input())
+
+print(a+b)
+```
+### Bevitel, ha lebegőpontos számokat akarunk használni
+Itt a float() függvény alakítja lebegőpontosra a bevitt értéket.
+```py
+a=float(input())
+b=float(input())
+
+print(a+b)
+```
