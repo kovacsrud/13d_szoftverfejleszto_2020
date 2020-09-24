@@ -32,10 +32,20 @@ a/=b
 print(a)
 
 #bevitel a felhasználótól
-a=float(input())
-b=float(input())
+#a=float(input())
+#b=float(input())
 
+#print(a+b)
 
-print(a+b)
+#logikai értékek, összehasonlítás
+c=12
+
+print(c==10)
+print(c!=10)
+print(c>10)
+print(c<10)
+print(c>=10)
+print(c<=10)
+
 
 
