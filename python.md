@@ -91,4 +91,12 @@ print(c<10)
 print(c>=10)
 print(c<=10)
 ```
+### Elágazások, esetszétválasztás
 
+**Egyszeres egyágú elágazás
+```py
+a=0
+
+if (a>0):
+    print("A szám pozitív!")
+```
