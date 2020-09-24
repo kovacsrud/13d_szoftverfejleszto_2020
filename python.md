@@ -82,3 +82,40 @@ b=float(input())
 
 print(a+b)
 ```
+### Összehasonlítások
+```py
+print(c==10)
+print(c!=10)
+print(c>10)
+print(c<10)
+print(c>=10)
+print(c<=10)
+```
+### Elágazások, esetszétválasztás
+
+**Egyszeres egyágú elágazás**
+```py
+a=0
+
+if (a>0):
+    print("A szám pozitív!")
+```
+**Egyszeres két ágú elágazás**
+```py
+a=0
+if (a>0):
+    print("A szám pozitív")
+else:
+    print("A szám negatív!")   
+```
+**Többszörös elágazás**
+
+```py
+a=0
+if (a>0):
+    print("A szám pozitív")
+elif(a==0):    
+    print("A szám nulla")
+else:
+    print("A szám negatív!")   
+```
