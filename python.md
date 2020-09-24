@@ -74,3 +74,11 @@ b=int(input())
 
 print(a+b)
 ```
+### Bevitel, ha lebegőpontos számokat akarunk használni
+Itt a float() függvény alakítja lebegőpontosra a bevitt értéket.
+```py
+a=float(input())
+b=float(input())
+
+print(a+b)
+```
