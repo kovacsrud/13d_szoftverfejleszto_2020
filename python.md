@@ -50,3 +50,10 @@ a=a*b
 
 print(a)
 ```
+**Értékadások rövidített formában**
+```python
+a+=b
+a*=b
+a-=b
+a/=b
+```
