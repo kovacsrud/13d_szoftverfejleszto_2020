@@ -38,3 +38,15 @@ a=10
 b=2
 ```
 Pythonban a változók típusának beállítása automatikus, a változóba beírt érték típusa alapján végzi a nyelv.
+
+### Értékadó utasítások
+
+```python
+a=10
+b=2
+
+a=a+b
+a=a*b
+
+print(a)
+```
