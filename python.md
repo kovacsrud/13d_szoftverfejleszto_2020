@@ -82,3 +82,13 @@ b=float(input())
 
 print(a+b)
 ```
+### Összehasonlítások
+```py
+print(c==10)
+print(c!=10)
+print(c>10)
+print(c<10)
+print(c>=10)
+print(c<=10)
+```
+
