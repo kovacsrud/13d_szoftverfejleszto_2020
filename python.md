@@ -29,3 +29,12 @@ Hatványozás
 ```python
 print(2**2)
 ```
+### Változók
+
+A változók a memória valamely részét jelentik, ahol értéket tárolhatunk. A változót egy névvel azonosítjuk.
+
+```python
+a=10
+b=2
+```
+Pythonban a változók típusának beállítása automatikus, a változóba beírt érték típusa alapján végzi a nyelv.
