@@ -203,5 +203,27 @@ adatok=adat.split(",")
 print(adatok)
 ```
 
+**Szövegrész kiemelése az adott szöveges változóból**
 
-
+Nézzük az alábbi szöveges változót, ami egy dátumot tárol:
+```py
+datum="2019.12.23"
+```
+Hogyan lehet kiemelni csak az évet?
+```py
+ev=datum[0:4]
+```
+A szögletes zárójelek között azt adjuk meg, hogy mely karaktertől kezdve, mely karakterig emeljük(másoljuk) ki a szövegből.
+```py
+honap=datum[5:7]
+nap=datum[8:]
+```
+**További megoldások:**
+A szöveg utolsó 3 karaktere:
+```py
+print(datum[-3:])
+```
+A szöveg összes karaktere az utolsó 3 kivételével
+```py
+print(datum[:-3])
+```
