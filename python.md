@@ -134,6 +134,27 @@ print(b.lower())
 print(a.upper())
 ```
 
+**Szövegek összehasonlítása**
+```py
+a="valami"
+b="ValAmi"
 
+if(a==b):
+    print("Megegyeznek")
+else:
+    print("Nem egyeznek meg")   
+```
+A fenti kódot futtatva azt kapjuk, hogy a szövegek nem egyeznek meg. Tartalmilag igen, de az eltérő írásmód miatt különbözőnek tekinti őket a program.
 
+Amennyiben arra vagyunk kíváncsiak, hogy a tartalmuk is egyezik-e, úgy azonos írásmóddal (kisbetűs, nagybetűs) kell őket összehasonlítani.
+```py
+a="valami"
+b="ValAmi"
 
+if(a.upper()==b.upper()):
+    print("Megegyeznek")
+else:
+    print("Nem egyeznek meg")   
+```
+
+Így azt kapjuk, hogy megegyeznek.
