@@ -193,3 +193,15 @@ print(c.isdigit())
 print(c.isalnum())
 ```
 Az első esetben vizsgáljuk, hogy c szám-e, a másodikban, hogy c alfanumerikus karakter-e.
+
+**Szövegek darabolása**
+Gyakori feladat, hogy felosszunk egy szöveget, több részre. A **split** funkció fogja ezt elvégezni, amelynek azt a karaktert kell megadni,
+amelyik mentén a szöveget fel akarjuk darabolni. A darabolás eredményeképpen egy tömb jön létre.
+```py
+adat="Kiss Elek,1989,Szeged,442669"
+adatok=adat.split(",")
+print(adatok)
+```
+
+
+
