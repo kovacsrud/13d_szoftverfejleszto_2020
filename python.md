@@ -158,3 +158,12 @@ else:
 ```
 
 Így azt kapjuk, hogy megegyeznek.
+
+### Egy string kezdete, vége megegyezik egy másik szöveggel?
+
+```py
+a="valami"
+b="ValAmi"
+print(a.startswith("va"))    
+print(a.endswith("ami"))   
+```
