@@ -167,3 +167,10 @@ b="ValAmi"
 print(a.startswith("va"))    
 print(a.endswith("ami"))   
 ```
+
+**Szövegrész keresése egy másik szövegben**
+```py
+a="valami"
+print(a.find("laza"))
+```
+A find funkció -1 et ad vissza, ha az megadott szöveg nem szerepel a szöveges változóban. Ha a megadott szöveget tartalmazza a változó, akkor a szövegrész kezdő indexét adja vissza.
