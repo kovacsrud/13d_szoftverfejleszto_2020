@@ -119,3 +119,21 @@ elif(a==0):
 else:
     print("A szám negatív!")   
 ```
+### Műveletek szöveges változókkal
+
+```py
+a="valami"
+b="ValAmi"
+```
+**Megjelenítés kisbetűsen**
+```py
+print(b.lower())
+```
+**Megjelenítés nagybetűsen**
+```py
+print(a.upper())
+```
+
+
+
+
