@@ -119,3 +119,111 @@ elif(a==0):
 else:
     print("A szám negatív!")   
 ```
+### Műveletek szöveges változókkal
+
+```py
+a="valami"
+b="ValAmi"
+```
+**Megjelenítés kisbetűsen**
+```py
+print(b.lower())
+```
+**Megjelenítés nagybetűsen**
+```py
+print(a.upper())
+```
+
+**Szövegek összehasonlítása**
+```py
+a="valami"
+b="ValAmi"
+
+if(a==b):
+    print("Megegyeznek")
+else:
+    print("Nem egyeznek meg")   
+```
+A fenti kódot futtatva azt kapjuk, hogy a szövegek nem egyeznek meg. Tartalmilag igen, de az eltérő írásmód miatt különbözőnek tekinti őket a program.
+
+Amennyiben arra vagyunk kíváncsiak, hogy a tartalmuk is egyezik-e, úgy azonos írásmóddal (kisbetűs, nagybetűs) kell őket összehasonlítani.
+```py
+a="valami"
+b="ValAmi"
+
+if(a.upper()==b.upper()):
+    print("Megegyeznek")
+else:
+    print("Nem egyeznek meg")   
+```
+
+Így azt kapjuk, hogy megegyeznek.
+
+### Egy string kezdete, vége megegyezik egy másik szöveggel?
+
+```py
+a="valami"
+b="ValAmi"
+print(a.startswith("va"))    
+print(a.endswith("ami"))   
+```
+
+**Szövegrész keresése egy másik szövegben**
+```py
+a="valami"
+print(a.find("laza"))
+```
+A find funkció -1 et ad vissza, ha az megadott szöveg nem szerepel a szöveges változóban. Ha a megadott szöveget tartalmazza a változó, akkor a szövegrész kezdő indexét adja vissza.
+
+**Hányszor tartalmazza az adott szöveg a megadottat**
+A count() fogja ezt megmondani.
+```py
+print(a.count("la"))
+```
+**Szövegrészek cseréje**
+```py
+a="valami"
+print(a.replace("a","b"))
+```
+
+**Logikai vizsgálatok**
+```py
+c="a"
+print(c.isdigit())
+print(c.isalnum())
+```
+Az első esetben vizsgáljuk, hogy c szám-e, a másodikban, hogy c alfanumerikus karakter-e.
+
+**Szövegek darabolása**
+Gyakori feladat, hogy felosszunk egy szöveget, több részre. A **split** funkció fogja ezt elvégezni, amelynek azt a karaktert kell megadni,
+amelyik mentén a szöveget fel akarjuk darabolni. A darabolás eredményeképpen egy tömb jön létre.
+```py
+adat="Kiss Elek,1989,Szeged,442669"
+adatok=adat.split(",")
+print(adatok)
+```
+
+**Szövegrész kiemelése az adott szöveges változóból**
+
+Nézzük az alábbi szöveges változót, ami egy dátumot tárol:
+```py
+datum="2019.12.23"
+```
+Hogyan lehet kiemelni csak az évet?
+```py
+ev=datum[0:4]
+```
+A szögletes zárójelek között azt adjuk meg, hogy mely karaktertől kezdve, mely karakterig emeljük(másoljuk) ki a szövegből.
+```py
+honap=datum[5:7]
+nap=datum[8:]
+```
+**További megoldások:**
+A szöveg utolsó 3 karaktere:
+```py
+print(datum[-3:])
+```
+A szöveg összes karaktere az utolsó 3 kivételével
+```py
+print(datum[:-3])
+```
