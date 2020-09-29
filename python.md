@@ -180,3 +180,16 @@ A count() fogja ezt megmondani.
 ```py
 print(a.count("la"))
 ```
+**Szövegrészek cseréje**
+```py
+a="valami"
+print(a.replace("a","b"))
+```
+
+**Logikai vizsgálatok**
+```py
+c="a"
+print(c.isdigit())
+print(c.isalnum())
+```
+Az első esetben vizsgáljuk, hogy c szám-e, a másodikban, hogy c alfanumerikus karakter-e.
