@@ -227,3 +227,67 @@ A szöveg összes karaktere az utolsó 3 kivételével
 ```py
 print(datum[:-3])
 ```
+### Tömbök
+
+Azonos típusú elemeket tartalmazó adatszerkezet.
+Az elemek számozása 0-tól kezdődik.
+```py
+szamok=[1,236,554,677,12,998,332,67,191,111,704,268]
+```
+**Adott indexű elem kiíratása**
+```py
+print(szamok[0])
+print(szamok[3])
+```
+
+**Tömb elemszámának kiíratása**
+```py
+print(len(szamok))
+```
+
+### FOR ciklus
+
+Ez a ciklus jó választás egy adatszerkezet elemeinek bejárására.
+Tömb elemeinek a kiíratása FOR-al:
+```py
+for i in szamok:
+    print(i)
+```
+Fontos, hogy a FOR-hoz tartozó utasításoknak ugyanakkora behúzással kell szerepelniük.
+
+### A Range() függvény
+A RANGE() függvény egy számsort készít, amely felhasználható egy adatszerkezet bejárásakor.
+
+```py
+r=range(0,20)
+print(*r)
+```
+
+A RANGE() gyakran szerepel a FOR ciklusban is.
+
+```py
+for i in range(0,len(szamok)):
+    szamok[i]+=10;
+    print(str(i)+":"+str(szamok[i]))
+```
+
+### Elöltesztelő ciklus, WHILE
+
+A WHILE ciklusnál egy belépési feltételt kell megfogalmazni, a ciklus mindaddig fut, amíg a belépési feltétel teljesül.
+Fontos gondoskodni arról, hogy a ciklus futása véget tudjon érni.
+
+**Egy elrontott WHILE**
+```py
+a=0
+while (a<20):
+    print(a)
+```
+Észre kell venni, hogy a értéke nem módosul, ezért ez a ciklus egy ún. végtelen ciklus.
+
+**Az előbbi példa helyesen**
+```py
+while (a<20):
+    print(a)
+    a+=1
+```
+Látszik, hogy **a** értéke minden egyes végrehajtáskor nő, így a ciklus **a=20** értéknél befejezi a futását.
