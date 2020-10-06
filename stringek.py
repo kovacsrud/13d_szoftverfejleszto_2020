@@ -71,3 +71,4 @@ print(datum[-3:])
 ## Az összes karakter az utolsó 3 kivételével
 print(datum[:-3])
 
+
