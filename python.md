@@ -312,3 +312,35 @@ while (a<20):
     a+=1
 ```
 Látszik, hogy **a** értéke minden egyes végrehajtáskor nő, így a ciklus **a=20** értéknél befejezi a futását.
+
+### Keresés listában
+A  klasszikus módszer az az hogy egy ciklussal végigmegyek a listán, minden elemet összehasonlítok a keresett elemmel. Ha van a keresett elemmel megegyező elem, akkor
+egy logikai változó értékének az True-ra állításával jelzem ez, illetve a **break** parancs használatával megszakítom a ciklust, hogy ne fusson tovább feleslegesen.
+
+```py
+nevek=['Ubul','Elek','Jakab','Tamás','Eleonóra']
+keres='Ubul'
+megvan=True
+for i in nevek:
+    if(i==keres):
+        megvan=False
+        break
+print(megvan)        
+```
+Nyilván ezt fáradtságos lenne mindig megírni, ezért a Python-ban (és más nyelvekben is természetesen) van beépített funkció arra, meg meg tudjuk nézni, hogy egy elem szerepel-e egy listában. Python-ban az ***in*** operátor vizsgálja meg, hogy egy érték megtalálható-e egy listában. Eredményül mindig egy logikai értéket(True/False) kapunk.
+```py
+nevek=['Ubul','Elek','Jakab','Tamás','Eleonóra']
+keres='Ubul'
+print(keres in nevek)
+```
+
+### Véletlen számok generálása
+
+Véletlen számok generálásához Python-ban be kell tölteni a random modult. A betöltött modulnak az **as** kulccszóval adunk egy olyan nevet, amelyen a programból hivakozunk rá.
+```py
+import random as rnd
+```
+Egy véletlen érték generálása a **randint** paranccsal végezhető el, meg kell adnunk, hogy milyen határok között akarunk értékeket generálni. A parancs a modul nevén belül szerepel, ponttal elválasztva.
+```py
+veletlenszam=rnd.randint(0,100)
+```
