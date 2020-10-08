@@ -354,6 +354,7 @@ Például:
 
 **6%4=2**, mert 4 egyszer van meg 6 ban, és a maradék 2.
 
+**Egy egyszerű példa Python-ban:**
 ```py
 if(6%2==0):
     print("Osztható maradék nélkül")
