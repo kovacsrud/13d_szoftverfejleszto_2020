@@ -344,3 +344,18 @@ Egy véletlen érték generálása a **randint** paranccsal végezhető el, meg 
 ```py
 veletlenszam=rnd.randint(0,100)
 ```
+### Maradékos osztás
+
+A maradékos osztást a **%** jellel jelöljük. Ennél a műveletnél az eredmény az osztáskor jelentkező maradék. 
+
+Például:
+**6%2=0**, mert 2 pontosan háromszor van meg 6-ban.
+
+**6%4=2**, mert 4 egyszer van meg 6 ban, és a maradék 2.
+
+```py
+if(6%2==0):
+    print("Osztható maradék nélkül")
+else:
+    print("Nem osztható maradék nélkül")
+```    
