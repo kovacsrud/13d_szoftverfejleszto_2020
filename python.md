@@ -245,6 +245,27 @@ print(szamok[3])
 print(len(szamok))
 ```
 
+**Tömb/lista elemeinek bővítése**
+```py
+nevek=[]
+nevek.append('Ubul')
+nevek.append('Zénó')
+```
+Az **append** paranccsal a lista végére tudunk új elemet beszúrni.
+
+**Beszúrás a lista egy adott helyére**
+```py
+nevek.insert(0,'Jolán')
+nevek.insert(2,'Janka')
+```
+Az **insert** parancsnak meg tudjuk adni azt az indexet, ahová be kell szúrni az új elemet, így már létező elemek közé is be tudunk szúrni újat.
+
+**Lista kiürítése**
+```py
+nevek.clear()
+```
+A **clear()** parancs használata után a lista üres.
+
 ### FOR ciklus
 
 Ez a ciklus jó választás egy adatszerkezet elemeinek bejárására.
