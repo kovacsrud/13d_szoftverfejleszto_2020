@@ -409,3 +409,6 @@ Növekményes ciklus i=0-tól hanySzam-ig
 		talalat+=1
 Ki:talalat		
 ```
+### Folyamatábrával
+
+![](lotto_algo.jpg)
