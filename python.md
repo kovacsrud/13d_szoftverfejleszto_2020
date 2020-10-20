@@ -359,8 +359,29 @@ Például:
 if(6%2==0):
     print("Osztható maradék nélkül")
 else:
-    print("Nem osztható maradék nélkül")
+    print("Nem osztható maradék nélkül")    
 ```    
+
+## Színek használata Python-ban
+
+Ha a megjelenített szöveget szeretnénk színezni, akkor szükség lesz valamilyen modul betöltésére. Egy ilyen  sok közül a ***colorama***
+Először be kell importálni a modul szükséges elemeit.
+```py
+from colorama import Fore,Back,Style
+```
+Kiíratás egy adott szövegszínnel(Fore ->Foreground, azaz előtér):
+```py
+print(Fore.GREEN+"Zöld betűk"+Style.RESET_ALL)
+```
+
+Kiíratás egy adott szövegszínnel, és háttérszínnel:(Back ->Background, azaz háttér):
+```py
+print(Fore.BLUE,Back.MAGENTA,Style.NORMAL+"Magenta háttér"+Style.RESET_ALL)
+```
+A **Style.RESET_ALL** állít vissza mindent az alaphelyzetbe.
+
+
+
 ## Lottó játék algoritmusa
 A játék induláskor kérje be a felhasználótól azt, hogy hány számmal akar játszani, illetve hány számból akarja sorsoltatni a nyerőszámokat. A klasszikus ötös lottó esetében 90 szám közül lehet 5-öt választani.
 Az induló adatok után a program kérje be a felhasználótól a megadott számú tippeket. Nem lehet két egyforma tipp, valamint a tippeknek a megadott számtartományba kell esniük.
