@@ -359,5 +359,97 @@ Például:
 if(6%2==0):
     print("Osztható maradék nélkül")
 else:
-    print("Nem osztható maradék nélkül")
+    print("Nem osztható maradék nélkül")    
 ```    
+
+## Színek használata Python-ban
+
+Ha a megjelenített szöveget szeretnénk színezni, akkor szükség lesz valamilyen modul betöltésére. Egy ilyen  sok közül a ***colorama***
+Először be kell importálni a modul szükséges elemeit.
+```py
+from colorama import Fore,Back,Style
+```
+Kiíratás egy adott szövegszínnel(Fore ->Foreground, azaz előtér):
+```py
+print(Fore.GREEN+"Zöld betűk"+Style.RESET_ALL)
+```
+
+Kiíratás egy adott szövegszínnel, és háttérszínnel:(Back ->Background, azaz háttér):
+```py
+print(Fore.BLUE,Back.MAGENTA,Style.NORMAL+"Magenta háttér"+Style.RESET_ALL)
+```
+A **Style.RESET_ALL** állít vissza mindent az alaphelyzetbe.
+
+
+
+## Lottó játék algoritmusa
+A játék induláskor kérje be a felhasználótól azt, hogy hány számmal akar játszani, illetve hány számból akarja sorsoltatni a nyerőszámokat. A klasszikus ötös lottó esetében 90 szám közül lehet 5-öt választani.
+Az induló adatok után a program kérje be a felhasználótól a megadott számú tippeket. Nem lehet két egyforma tipp, valamint a tippeknek a megadott számtartományba kell esniük.
+Sorsoláskor figyelni kell arra, hogy nem lehet egyforma nyerőszám.
+A játék végén meg kell határozni, hogy a játékos hány számot talált el.
+
+### Mondatszerű leírás
+```py
+Be hanySzam
+Be osszSzam
+Növekményes ciklus i=0-tól hanySzam-ig
+	Be atmeneti
+	Ciklus amíg (atmeneti<1 vagy atmeneti>osszSzam vagy atmeneti in tippek)
+		Ki "Rossz tipp, újra!"
+		Be atmeneti
+	tippek.betesz(atmeneti)	
+Növekményes ciklus i=0-tól hanySzam-ig
+	atmeneti=veletlenszam(1,osszSzam)
+	Ciklus amíg(atmeneti in nyeroszamok)
+		atmeneti=veletlenszam(1,osszSzam)
+	nyeroszamok.betesz(atmeneti)
+talalat=0	
+Növekményes ciklus i=0-tól hanySzam-ig
+	ha(tippek[i] in nyeroszamok) akkor
+		talalat+=1
+Ki:talalat		
+```
+### Folyamatábrával
+
+![](lotto_algo.jpg)
+
+```py
+from colorama import Fore,Back,Style
+import random as rnd
+
+tippek=[]
+nyeroszamok=[]
+
+print("Hány számmal játszunk?:")
+hanySzam=int(input())
+print("Hány számból sorsolunk?:")
+osszSzam=int(input())
+#Tippelés
+for i in range(0,hanySzam):
+    print("Tipp "+str(i+1)+":")
+    atmeneti=int(input())
+    while (atmeneti<1 or atmeneti>osszSzam or atmeneti in tippek):
+            print("Rossz tipp, újra! " + str(i+1) + ":")
+            atmeneti = int(input())
+    tippek.append(atmeneti)
+
+print(tippek)
+
+#Sorsolás
+for i in range(0,hanySzam):
+    atmeneti=rnd.randint(1,osszSzam)
+    while (atmeneti in nyeroszamok):
+        atmeneti = rnd.randint(1, osszSzam)
+    nyeroszamok.append(atmeneti)
+
+print(nyeroszamok)
+
+talalat=0
+for i in range(0,hanySzam):
+    if (tippek[i] in nyeroszamok):
+        talalat+=1
+
+print("Talalat:"+str(talalat))
+#Feladat : Írassa ki ciklussal a tippeket,
+# jelölje színnel az eltalált számokat(ha vannak)
+```
