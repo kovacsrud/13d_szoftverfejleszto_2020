@@ -453,3 +453,79 @@ print("Talalat:"+str(talalat))
 #Feladat : Írassa ki ciklussal a tippeket,
 # jelölje színnel az eltalált számokat(ha vannak)
 ```
+## Programozási tételek megvalósítása Python-ban
+
+### Keresés, kiválogatás (negatív számok kiválogatása egy másik listába)
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+negativak=[]
+
+for i in range(0,len(szamok)):
+    if(szamok[i]<0):
+        negativak.append(szamok[i])
+print(negativak)	
+```
+
+### Megszámlálás
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+darab=0
+
+for i in range(0,len(szamok)):
+    if(szamok[i]>-1):
+        #darab=darab+1
+        darab+=1
+
+print(darab)
+```
+
+### Összegzés
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+osszeg=0
+
+for i in range(0,len(szamok)):
+    osszeg+=szamok[i]
+    
+print(osszeg)   
+```
+
+### Összegzés feltétellel
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+osszeg=0
+
+for i in range(0,len(szamok)):
+    if(szamok[i]>-1):
+        osszeg+=szamok[i]
+
+print(osszeg)   
+```
+
+### Minimum, maximum kiválasztás
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+min=szamok[0]
+max=szamok[0]
+
+for i in range(0,len(szamok)):
+    if(szamok[i]<min):
+        min=szamok[i]
+    if(szamok[i]>max):
+        max=szamok[i]
+
+print("Min:"+str(min))        
+print("Max:"+str(max))
+```
+### Rendezés
+```py
+szamok=[10,-2,122,-31,-19,26,33,-121,59]        
+for i in range(0,len(szamok)-1):
+    for j in range(i+1,len(szamok)):
+        if(szamok[i]>szamok[j]):
+            temp=szamok[i]
+            szamok[i]=szamok[j]
+            szamok[j]=temp
+
+print(szamok)
+```
