@@ -546,5 +546,8 @@ szamok=[11,22,34,56,76,32,1,233,119,113,876,345]
 npszamok=np.array(szamok)
 print(npszamok)
 ```
-
+Az elemekhez való hozzáférés ugyanaz, mint a listák esetében, itt is 0-tól kezdődik az indexelés:
+```py
+print(npszamok[1])
+```
 
