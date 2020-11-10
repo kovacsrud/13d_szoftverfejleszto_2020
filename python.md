@@ -557,3 +557,7 @@ print(npszamok.mean())
 print(npszamok.min())
 print(npszamok.max())
 ```
+Egyszerű kiválogatás (pl. 100-nál nagyobb értékek):
+```py
+print(npszamok[npszamok>100])
+```
