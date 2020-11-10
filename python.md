@@ -529,3 +529,6 @@ for i in range(0,len(szamok)-1):
 
 print(szamok)
 ```
+## A numpy (numeric python) modul
+Ez a modul általában telepítést igényel és utána használható (kivételt általában az online környezetek jelentenek). A modul rengeteg tömbökkel kapcsolatos műveletet, számítást támogat.
+
