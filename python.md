@@ -561,3 +561,8 @@ Egyszerű kiválogatás (pl. 100-nál nagyobb értékek):
 ```py
 print(npszamok[npszamok>100])
 ```
+Kiválogatás összetett feltétellel (ebben az esetben zárójelezni kell a feltételeinket!):
+```py
+print(npszamok[(npszamok>100) & (npszamok<300)])
+```
+
