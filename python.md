@@ -532,3 +532,19 @@ print(szamok)
 ## A numpy (numeric python) modul
 Ez a modul általában telepítést igényel és utána használható (kivételt általában az online környezetek jelentenek). A modul rengeteg tömbökkel kapcsolatos műveletet, számítást támogat.
 
+A modul importálása (az AS utáni álnév bármi lehet de legtöbbször a modul nevének rövidítése)
+
+```py
+import numpy as np
+```
+létrehozunk egy listát:
+```py
+szamok=[11,22,34,56,76,32,1,233,119,113,876,345]
+```
+átalakítás numpy tömbbé:
+```py
+npszamok=np.array(szamok)
+print(npszamok)
+```
+
+
