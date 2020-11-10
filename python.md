@@ -532,37 +532,52 @@ print(szamok)
 ## A numpy (numeric python) modul
 Ez a modul általában telepítést igényel és utána használható (kivételt általában az online környezetek jelentenek). A modul rengeteg tömbökkel kapcsolatos műveletet, számítást támogat.
 
-A modul importálása (az AS utáni álnév bármi lehet de legtöbbször a modul nevének rövidítése)
+**A modul importálása (az AS utáni álnév bármi lehet de legtöbbször a modul nevének rövidítése)**
 
 ```py
 import numpy as np
 ```
-létrehozunk egy listát:
+**létrehozunk egy listát:*
 ```py
 szamok=[11,22,34,56,76,32,1,233,119,113,876,345]
 ```
-átalakítás numpy tömbbé:
+**átalakítás numpy tömbbé:**
 ```py
 npszamok=np.array(szamok)
 print(npszamok)
 ```
-Az elemekhez való hozzáférés ugyanaz, mint a listák esetében, itt is 0-tól kezdődik az indexelés:
+**Az elemekhez való hozzáférés ugyanaz, mint a listák esetében, itt is 0-tól kezdődik az indexelés:**
 ```py
 print(npszamok[1])
 ```
-A numpy megvalósítja az elemeken az alapvető algoritmusokat (összeg,átlag,min,max), nagyon egyszerűen
+**A numpy megvalósítja az elemeken az alapvető algoritmusokat (összeg,átlag,min,max), nagyon egyszerűen**
 ```py
 print(npszamok.sum())
 print(npszamok.mean())
 print(npszamok.min())
 print(npszamok.max())
 ```
-Egyszerű kiválogatás (pl. 100-nál nagyobb értékek):
+**Egyszerű kiválogatás (pl. 100-nál nagyobb értékek):**
 ```py
 print(npszamok[npszamok>100])
 ```
-Kiválogatás összetett feltétellel (ebben az esetben zárójelezni kell a feltételeinket!):
+**Kiválogatás összetett feltétellel (ebben az esetben zárójelezni kell a feltételeinket!):**
 ```py
 print(npszamok[(npszamok>100) & (npszamok<300)])
 ```
+**Kiválogatás az elemek indexe szerint:**
 
+Kiválogatás a 3-tól a 6. elemig
+```py
+print(npszamok[3:6])
+```
+**Az összes elem a 3-as indexűtől kezdve:**
+```py
+print(npszamok[3:])
+```
+
+**Minden elem a 3-as indexűig**
+
+```py
+print(npszamok[:3])
+```
