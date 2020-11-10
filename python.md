@@ -550,4 +550,10 @@ Az elemekhez való hozzáférés ugyanaz, mint a listák esetében, itt is 0-tó
 ```py
 print(npszamok[1])
 ```
-
+A numpy megvalósítja az elemeken az alapvető algoritmusokat (összeg,átlag,min,max), nagyon egyszerűen
+```py
+print(npszamok.sum())
+print(npszamok.mean())
+print(npszamok.min())
+print(npszamok.max())
+```
