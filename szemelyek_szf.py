@@ -1,4 +1,5 @@
 import random as rnd
+import datetime as dt
 
 class Szemely:
     def __init__(self,vezeteknev,keresztnev,szuletesiev,szuletesihely):
@@ -6,10 +7,15 @@ class Szemely:
         self.keresztnev=keresztnev
         self.szuletesiev=szuletesiev
         self.szuletesihely=szuletesihely
+    def Eletkor(self):
+        datum=dt.datetime.now()
+        return datum.year-self.szuletesiev
+
 
 def Listaz(lista):
     for i in range(0,len(lista)):
         print(lista[i].vezeteknev+" "+lista[i].keresztnev+","+str(lista[i].szuletesiev)+","+lista[i].szuletesihely)
+    print("----------------------------------");
 
 szemelyek=[]
 adatszam=500
@@ -60,3 +66,9 @@ kbetusek=list(filter(lambda x:x.vezeteknev.startswith("K"),szemelyek))
 #for i in range(0,len(kbetusek)):
 #    print(kbetusek[i].vezeteknev+","+str(kbetusek[i].szuletesiev))
 Listaz(kbetusek)
+
+harmincasok=list(filter(lambda x:x.Eletkor()==30,szemelyek))
+
+Listaz(harmincasok)
+
+# Ahol az életkor 40 és 60 év között van
