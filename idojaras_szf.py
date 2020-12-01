@@ -83,3 +83,37 @@ print(tup[1])
 #tup[1]=234
 
 # Határozzuk meg, hogy az egyes évek hónapjaiban mekkora volt a maximális hőmérséklet!
+maxho={}
+
+for i in idoadatok:
+    kulcs=(i.ev,i.honap)
+    if kulcs in maxho:
+        if i.homerseklet>maxho[kulcs]:
+            maxho[kulcs]=i.homerseklet
+    else:
+        maxho[kulcs]=i.homerseklet
+
+print(maxho)
+
+r_maxhoadat=OrderedDict(sorted(maxho.items()))
+
+print(r_maxhoadat)
+
+minho={}
+
+for i in idoadatok:
+    kulcs=(i.ev,i.honap)
+    if kulcs in minho:
+        if i.homerseklet<minho[kulcs]:
+            minho[kulcs]=i.homerseklet
+    else:
+        minho[kulcs]=i.homerseklet
+
+print(minho)
+
+r_minhoadat=OrderedDict(sorted(minho.items()))
+
+print(r_minhoadat)
+
+# Határozzuk meg az egyes évek hónapjainak átlaghőmérsékletét!
+
