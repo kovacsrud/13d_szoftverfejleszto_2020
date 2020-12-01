@@ -116,4 +116,18 @@ r_minhoadat=OrderedDict(sorted(minho.items()))
 print(r_minhoadat)
 
 # Határozzuk meg az egyes évek hónapjainak átlaghőmérsékletét!
+atlagho={}
 
+for i in idoadatok:
+    kulcs=(i.ev,i.honap)
+    if kulcs in atlagho:
+        atlagho[kulcs][0]+=i.homerseklet
+        atlagho[kulcs][1]+=1
+    else:
+        atlagho[kulcs]=[i.homerseklet,1]
+
+
+print(atlagho)
+
+for i,j in atlagho.items():
+    print("{}.{}:{}".format(i[0],i[1],j[0]/j[1]))
