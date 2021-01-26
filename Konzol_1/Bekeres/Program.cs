@@ -22,6 +22,11 @@ namespace Bekeres
             
             Console.WriteLine($"Szám1:{szam1},Szám2:{szam2},Összeg:{szam3}");
 
+            //Két szám szorzása
+
+            //Adott számot emeljünk egy adott hatványra
+            //Math.Pow
+            //kérjük be egy kör sugarát, adjuk meg a kerületét, területét
 
 
             Console.ReadKey();
