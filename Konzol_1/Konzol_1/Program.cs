@@ -19,6 +19,8 @@ namespace Konzol_1
 
             szam1 = 2044;
 
+            long nagyszam = 1212343534545;
+            
 
             Console.WriteLine("C# kezdés");
 
@@ -41,12 +43,31 @@ namespace Konzol_1
             byte bajt = 123;
 
             //lebegőpontos számok
-            float nemegesz1 = 123.667f;
-            double nemegesz2 = 123.667;
-            decimal nemegesz3 = 123.6666m;
+            float nemegesz1 = 123.0123456789012345678901234567890123456789f;
+            double nemegesz2 = 123.0123456789012345678901234567890123456789;
+            decimal nemegesz3 = 123.0123456789012345678901234567890123456789m;
 
-          
+            Console.WriteLine($"{nemegesz1}");
+            Console.WriteLine($"{nemegesz2}");
+            Console.WriteLine($"{nemegesz3}");
 
+            double kiirando = 123.123;
+            //kiíratás két tizedessel
+            Console.WriteLine($"{kiirando:0.00}");
+
+            //kiíratás két tizedessel, ha a tizedes értéke 0, akkor nem jelenik meg
+            Console.WriteLine($"{kiirando:0.##}");
+            //karakteres típus, egyetlen karakter tárolására
+            char betu = 'b';
+
+            //szöveges típus
+            string szoveg = "Valami szöveg";
+
+            //indexelhető
+            Console.WriteLine(szoveg[4]);
+
+            //logikai típus
+            bool logikai = false;
 
             Console.ReadKey();
         }
