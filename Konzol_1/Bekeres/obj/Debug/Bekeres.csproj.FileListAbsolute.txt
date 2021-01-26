@@ -1,0 +1,7 @@
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\bin\Debug\Bekeres.exe.config
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\bin\Debug\Bekeres.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\bin\Debug\Bekeres.pdb
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\obj\Debug\Bekeres.csprojAssemblyReference.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\obj\Debug\Bekeres.csproj.CoreCompileInputs.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\obj\Debug\Bekeres.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\Konzol_1\Bekeres\obj\Debug\Bekeres.pdb
