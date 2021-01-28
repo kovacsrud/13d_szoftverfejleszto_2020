@@ -13,17 +13,21 @@ namespace ElagazasEsTomb
             Console.Write("Adj meg egy számot:");
             int szam = Convert.ToInt32(Console.ReadLine());
 
-            if (szam>0)
+            if (szam > 0)
             {//kódblokk, az itt létrehozott változók lokális
              //változók, és csak ebben a kódblokkban érhetők el   
                 Console.WriteLine("Pozitív");
-            } else if (szam<0)
+            }
+            else if (szam < 0)
             {
                 Console.WriteLine("Negatív");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Nulla");
             }
+           
+
 
             Console.ReadKey();
         }
