@@ -26,7 +26,21 @@ namespace Bekeres
 
             //Adott számot emeljünk egy adott hatványra
             //Math.Pow
+
+            int hatvanySzam = Convert.ToInt32(Console.ReadLine());
+            int kitevo= Convert.ToInt32(Console.ReadLine());
+
+            var hatvany = Math.Pow(hatvanySzam, kitevo);
+
+            Console.WriteLine(hatvany);
+
             //kérjük be egy kör sugarát, adjuk meg a kerületét, területét
+            Console.Write("Add meg a kör sugarát:");
+            var sugar = Convert.ToInt32(Console.ReadLine());
+            var kerulet = 2 * sugar * Math.PI;
+            var terulet = sugar * sugar * Math.PI;
+
+            Console.WriteLine($"Kerület:{kerulet:0.00},terület:{terulet:0.00}");
 
 
             Console.ReadKey();
