@@ -32,6 +32,19 @@ namespace Tombok
                 Console.Write(szamok2[i]+" ");
             }
 
+            //szamok1 tömb feltöltése tetszőleges értékkel, listázás
+            for (int i = 0; i < szamok1.Length; i++)
+            {
+                szamok1[i] = 16;
+            }
+
+
+            //nevek tömb listázása
+
+            for (int i = 0; i < nevek.Length; i++)
+            {
+                Console.WriteLine(nevek[i]);
+            }
 
             Console.ReadKey();
         }
