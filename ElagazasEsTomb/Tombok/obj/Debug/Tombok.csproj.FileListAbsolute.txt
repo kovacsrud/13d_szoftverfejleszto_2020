@@ -1,0 +1,7 @@
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\bin\Debug\Tombok.exe.config
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\bin\Debug\Tombok.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\bin\Debug\Tombok.pdb
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\obj\Debug\Tombok.csprojAssemblyReference.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\obj\Debug\Tombok.csproj.CoreCompileInputs.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\obj\Debug\Tombok.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Tombok\obj\Debug\Tombok.pdb
