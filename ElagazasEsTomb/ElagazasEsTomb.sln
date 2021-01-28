@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElagazasEsTomb", "ElagazasE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tombok", "Tombok\Tombok.csproj", "{39764819-4529-4C5B-9514-C0685C48D5BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Increment", "Increment\Increment.csproj", "{9693734D-3D04-48AB-9E45-ED95A4D64A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{39764819-4529-4C5B-9514-C0685C48D5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39764819-4529-4C5B-9514-C0685C48D5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39764819-4529-4C5B-9514-C0685C48D5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9693734D-3D04-48AB-9E45-ED95A4D64A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9693734D-3D04-48AB-9E45-ED95A4D64A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9693734D-3D04-48AB-9E45-ED95A4D64A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9693734D-3D04-48AB-9E45-ED95A4D64A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

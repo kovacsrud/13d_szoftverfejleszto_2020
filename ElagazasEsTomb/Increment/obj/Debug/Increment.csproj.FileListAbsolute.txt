@@ -1,0 +1,7 @@
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\bin\Debug\Increment.exe.config
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\bin\Debug\Increment.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\bin\Debug\Increment.pdb
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\obj\Debug\Increment.csprojAssemblyReference.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\obj\Debug\Increment.csproj.CoreCompileInputs.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\obj\Debug\Increment.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\Increment\obj\Debug\Increment.pdb
