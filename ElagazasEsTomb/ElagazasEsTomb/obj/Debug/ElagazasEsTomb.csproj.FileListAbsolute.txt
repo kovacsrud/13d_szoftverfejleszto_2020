@@ -1,0 +1,7 @@
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\bin\Debug\ElagazasEsTomb.exe.config
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\bin\Debug\ElagazasEsTomb.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\bin\Debug\ElagazasEsTomb.pdb
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\obj\Debug\ElagazasEsTomb.csprojAssemblyReference.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\obj\Debug\ElagazasEsTomb.csproj.CoreCompileInputs.cache
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\obj\Debug\ElagazasEsTomb.exe
+G:\tavtanitas\kodtarak\13d_szoftverfejleszto_2020\ElagazasEsTomb\ElagazasEsTomb\obj\Debug\ElagazasEsTomb.pdb
