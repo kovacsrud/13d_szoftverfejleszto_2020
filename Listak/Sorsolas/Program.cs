@@ -49,6 +49,17 @@ namespace Sorsolas
             }
             //Tegyük vissza a kivett elemeket a szamgomb listába!
 
+            szamgomb.AddRange(kivalasztott);
+            kivalasztott.Clear();
+            
+            Console.WriteLine();
+
+            foreach (var i in szamgomb)
+            {
+                Console.Write($"{i} ");
+            }
+
+
             Console.ReadKey();
         }
     }
