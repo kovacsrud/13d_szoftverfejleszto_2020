@@ -35,6 +35,34 @@ namespace Stringek
             Console.WriteLine(szoveg.Replace(" ", ""));
             Console.WriteLine(szoveg.Replace("ValAmi", "bármi"));
 
+            string datum="2021.02.05";
+
+            var ev = datum.Substring(0, 4);
+            var honap = datum.Substring(5,2);
+            var nap = datum.Substring(8,2);
+
+            Console.WriteLine(ev);
+            Console.WriteLine(honap);
+            Console.WriteLine(nap);
+
+            var datumelemek = datum.Split('.');
+
+            foreach (var i in datumelemek)
+            {
+                Console.WriteLine(i);
+            }
+
+            string dirtystring = "      dirty      ";
+
+            Console.WriteLine(dirtystring.Trim());
+            Console.WriteLine(dirtystring.TrimStart());
+            Console.Write(dirtystring.TrimEnd());
+            Console.WriteLine("valami");
+
+
+
+
+
 
 
 
