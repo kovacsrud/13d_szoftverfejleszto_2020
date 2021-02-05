@@ -52,12 +52,36 @@ namespace Stringek
                 Console.WriteLine(i);
             }
 
-            string dirtystring = "      dirty      ";
+            string dirtystring = "@#      dirty  !    %";
 
-            Console.WriteLine(dirtystring.Trim());
-            Console.WriteLine(dirtystring.TrimStart());
-            Console.Write(dirtystring.TrimEnd());
-            Console.WriteLine("valami");
+            char[] levagandok = { '@', '#', ' ', '!', '%' };
+            Console.WriteLine(dirtystring.Trim(levagandok));
+            Console.WriteLine(dirtystring.TrimStart(levagandok));
+            Console.WriteLine(dirtystring.TrimEnd(levagandok));
+
+            string cserelendo = "KisBetűsT NagyBetűSrE";
+            Console.WriteLine(cserelendo);
+            char[] cserelendochar = cserelendo.ToCharArray();
+
+            for (int i = 0; i < cserelendochar.Length; i++)
+            {
+                if (Char.IsUpper(cserelendochar[i]))
+                {
+                    cserelendochar[i] = Char.ToLower(cserelendochar[i]);
+                }
+                 else
+                {
+                    cserelendochar[i] = Char.ToUpper(cserelendochar[i]);
+                }
+            }
+
+            cserelendo = new string(cserelendochar);
+
+            Console.WriteLine(cserelendo);
+
+            string osszeadni = "124677849952532";
+            //próbáljuk meg önállóan összeadni a string-ben lévő
+            //számokat
 
 
 
