@@ -83,10 +83,35 @@ namespace Stringek
             //próbáljuk meg önállóan összeadni a string-ben lévő
             //számokat
 
+            int osszeg = 0;
 
+            char[] osszechar = osszeadni.ToCharArray();
 
+            for (int i = 0; i < osszechar.Length; i++)
+            {
+                osszeg += (int)Char.GetNumericValue(osszechar[i]);
+            }
 
+            string osszeadni2 = "ab123gh56klm763";
 
+            //Adjuk össze az osszeadni2 string-ben lévő számokat
+
+            char[] ossze2 = osszeadni2.ToCharArray();
+            int osszeg2 = 0;
+
+            for (int i = 0; i < ossze2.Length; i++)
+            {
+                if (Char.IsDigit(ossze2[i]))
+                {
+                    osszeg2 += (int)Char.GetNumericValue(ossze2[i]);
+                }
+            }
+
+            
+
+            Console.WriteLine(osszeg);
+
+            Console.WriteLine(osszeg2);
 
 
 
