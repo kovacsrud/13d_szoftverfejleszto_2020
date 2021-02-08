@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuggvenyek", "Fuggvenyek\Fu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuggveny_generalas", "Fuggveny_generalas\Fuggveny_generalas.csproj", "{6270F640-430B-454E-95E1-953A7B59FAE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyakorlasok", "Gyakorlasok\Gyakorlasok.csproj", "{D2B36FDB-97DC-4324-93AC-FB7833F285BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6270F640-430B-454E-95E1-953A7B59FAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6270F640-430B-454E-95E1-953A7B59FAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6270F640-430B-454E-95E1-953A7B59FAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B36FDB-97DC-4324-93AC-FB7833F285BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B36FDB-97DC-4324-93AC-FB7833F285BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B36FDB-97DC-4324-93AC-FB7833F285BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B36FDB-97DC-4324-93AC-FB7833F285BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
