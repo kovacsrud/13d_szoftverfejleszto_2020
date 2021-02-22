@@ -46,6 +46,7 @@ namespace FuggvenyEsTomb
             TombLista(t1);
             TombLista(t2);
             TombLista(t3);
+           
 
             Console.ReadKey();
         }
