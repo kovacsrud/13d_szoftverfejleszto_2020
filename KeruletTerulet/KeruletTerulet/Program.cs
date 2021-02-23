@@ -19,6 +19,16 @@ namespace KeruletTerulet
             return a * b;
         }
 
+        static double KorKerulet(double sugar)
+        {
+            return 2 * sugar * Math.PI;
+        }
+
+        static double KorTerulet(double sugar)
+        {
+            return sugar * sugar * Math.PI;
+        }
+
         static void Main(string[] args)
         {
             Console.Write("Add meg a téglalap A oldalát!:");
@@ -31,6 +41,11 @@ namespace KeruletTerulet
 
             Console.WriteLine($"A téglalap területe:{TeglalapTerulet(aoldal,boldal)}");
 
+            Console.Write("Add meg a kör sugarát:");
+            var sugar = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine($"A kör kerülete:{KorKerulet(sugar)}");
+            Console.WriteLine($"A kör területe:{KorTerulet(sugar)}");
 
 
             Console.ReadKey();
