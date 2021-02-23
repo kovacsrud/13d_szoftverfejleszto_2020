@@ -36,49 +36,53 @@ namespace KeruletTerulet
             var valasz = Console.ReadKey().KeyChar;
             Console.WriteLine();
 
-          while (Char.ToLower(valasz) == 'k' || Char.ToLower(valasz) == 't')
-          {
-
-                       
-
-
-            if (Char.ToLower(valasz)=='k')
+            do
             {
-                Console.Write("Add meg a kör sugarát:");
-                var sugar = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine($"A kör kerülete:{KorKerulet(sugar)}");
-                Console.WriteLine($"A kör területe:{KorTerulet(sugar)}");
-            }
-            else if (Char.ToLower(valasz)=='t')
-            {
-                Console.Write("Add meg a téglalap A oldalát!:");
-                double aoldal = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Add meg a téglalap B oldalát!:");
-                var boldal = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine($"A téglalap kerülete:{TeglalapKerulet(aoldal, boldal)}");
 
-                Console.WriteLine($"A téglalap területe:{TeglalapTerulet(aoldal, boldal)}");
-            } else
-            {
-                Console.WriteLine("Semmit nem kell számolnom! :)");
-            }
+                if (Char.ToLower(valasz) == 'k')
+                {
+                    Console.Write("Add meg a kör sugarát:");
+                    var sugar = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine($"A kör kerülete:{KorKerulet(sugar)}");
+                    Console.WriteLine($"A kör területe:{KorTerulet(sugar)}");
+                }
+                else if (Char.ToLower(valasz) == 't')
+                {
+                    Console.Write("Add meg a téglalap A oldalát!:");
+                    double aoldal = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("Add meg a téglalap B oldalát!:");
+                    var boldal = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine($"A téglalap kerülete:{TeglalapKerulet(aoldal, boldal)}");
+
+                    Console.WriteLine($"A téglalap területe:{TeglalapTerulet(aoldal, boldal)}");
+                }
+                else
+                {
+                    Console.WriteLine("Semmit nem kell számolnom! :)");
+                }
 
 
                 Console.WriteLine("(K)ör vagy (t)églalap számítás?");
                 valasz = Console.ReadKey().KeyChar;
                 Console.WriteLine();
 
-            }
+                //Char.ToLower(valasz) == 'k' || Char.ToLower(valasz) == 't'
+
+
+            } while (Char.ToLower(valasz) == 'k' || Char.ToLower(valasz) == 't');
 
 
 
 
 
 
-            Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }
