@@ -36,6 +36,12 @@ namespace KeruletTerulet
             var valasz = Console.ReadKey().KeyChar;
             Console.WriteLine();
 
+          while (Char.ToLower(valasz) == 'k' || Char.ToLower(valasz) == 't')
+          {
+
+                       
+
+
             if (Char.ToLower(valasz)=='k')
             {
                 Console.Write("Add meg a kör sugarát:");
@@ -61,10 +67,15 @@ namespace KeruletTerulet
             }
 
 
+                Console.WriteLine("(K)ör vagy (t)églalap számítás?");
+                valasz = Console.ReadKey().KeyChar;
+                Console.WriteLine();
 
-            
+            }
 
-            
+
+
+
 
 
             Console.ReadKey();
