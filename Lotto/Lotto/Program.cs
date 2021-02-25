@@ -93,6 +93,7 @@ namespace Lotto
 
         private static void TombLista(int[] tomb)
         {
+            
             for (int i = 0; i < tomb.Length; i++)
             {
                 Console.Write(tomb[i] + " ");
