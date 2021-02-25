@@ -27,64 +27,77 @@ namespace Lotto
             int[] tippek = new int[hanySzam];
             int[] nyeroSzamok = new int[hanySzam];
             int talalat = 0;
+            char valasz = 'n';
+            
 
             Random rand = new Random();
 
-            //Tippek bekérése
-            for (int i = 0; i < hanySzam; i++)
-            {
-                Console.Write($"{i + 1}.tipp:");
-                int temp = Convert.ToInt32(Console.ReadLine());
-                while (temp < 1 || temp > mennyiSzam || tippek.Contains(temp))
+            do {
+
+
+                //Tippek bekérése
+                for (int i = 0; i < hanySzam; i++)
                 {
-                    Console.Write($"A tipp rossz,{i + 1}.tipp újra:");
-                    temp = Convert.ToInt32(Console.ReadLine());
-                }
-                tippek[i] = temp;
-
-            }
-
-            //Tippek listázása
-            TombLista(tippek);
-
-            //Nyerőszámok sorsolása
-            for (int i = 0; i < hanySzam; i++)
-            {
-                int temp = rand.Next(1,mennyiSzam+1);
-                while (nyeroSzamok.Contains(temp)) 
-                {
-                    temp = rand.Next(1, mennyiSzam + 1);
-                }
-                nyeroSzamok[i] = temp;
-            }
-
-            TombLista(nyeroSzamok);
-
-            //Találatok meghatározása
-
-            for (int i = 0; i < tippek.Length; i++)
-            {
-                for (int j = 0; j < nyeroSzamok.Length; j++)
-                {
-                    if (tippek[i]==nyeroSzamok[j])
+                    Console.Write($"{i + 1}.tipp:");
+                    int temp = Convert.ToInt32(Console.ReadLine());
+                    while (temp < 1 || temp > mennyiSzam || tippek.Contains(temp))
                     {
-                        talalat += 1;
+                        Console.Write($"A tipp rossz,{i + 1}.tipp újra:");
+                        temp = Convert.ToInt32(Console.ReadLine());
+                    }
+                    tippek[i] = temp;
+
+                }
+
+                //Tippek listázása
+                TombLista(tippek);
+
+                //Nyerőszámok sorsolása
+                for (int i = 0; i < hanySzam; i++)
+                {
+                    int temp = rand.Next(1, mennyiSzam + 1);
+                    while (nyeroSzamok.Contains(temp))
+                    {
+                        temp = rand.Next(1, mennyiSzam + 1);
+                    }
+                    nyeroSzamok[i] = temp;
+                }
+
+                TombLista(nyeroSzamok);
+
+                //Találatok meghatározása
+
+                for (int i = 0; i < tippek.Length; i++)
+                {
+                    for (int j = 0; j < nyeroSzamok.Length; j++)
+                    {
+                        if (tippek[i] == nyeroSzamok[j])
+                        {
+                            talalat += 1;
+                        }
                     }
                 }
-            }
 
-            talalat = 0;
+                talalat = 0;
 
-            for (int i = 0; i < tippek.Length; i++)
-            {
-                if (nyeroSzamok.Contains(tippek[i]))
+                for (int i = 0; i < tippek.Length; i++)
                 {
-                    talalat++;
+                    if (nyeroSzamok.Contains(tippek[i]))
+                    {
+                        talalat++;
+                    }
                 }
-            }
 
 
-            Console.WriteLine($"Találatok:{talalat}");
+                Console.WriteLine($"Találatok:{talalat}");
+
+                Console.Write("Akar újat játszani?(i/n)");
+                valasz = Console.ReadKey().KeyChar;
+
+
+            } while (Char.ToLower(valasz)=='i');
+
+
 
 
 
