@@ -32,7 +32,7 @@ namespace Lotto
 
             Random rand = new Random();
 
-            do {
+           
 
 
                 //Tippek bekérése
@@ -51,7 +51,9 @@ namespace Lotto
 
                 //Tippek listázása
                 TombLista(tippek);
-
+            int sorsolasok = 0;
+            do
+            {
                 //Nyerőszámok sorsolása
                 for (int i = 0; i < hanySzam; i++)
                 {
@@ -63,7 +65,7 @@ namespace Lotto
                     nyeroSzamok[i] = temp;
                 }
 
-                TombLista(nyeroSzamok);
+                //TombLista(nyeroSzamok);
 
                 //Találatok meghatározása
 
@@ -88,16 +90,26 @@ namespace Lotto
                     }
                 }
 
-
-                Console.WriteLine($"Találatok:{talalat}");
-
-                Console.Write("Akar újat játszani?(i/n)");
-                valasz = Console.ReadKey().KeyChar;
-
-
-            } while (Char.ToLower(valasz)=='i');
+                if (talalat>0)
+                {
+                    Console.WriteLine($"Találatok:{talalat}");
+                }
+                
 
 
+                sorsolasok++;
+
+                //Console.Write("Akar újat játszani?(i/n)");
+                //valasz = Console.ReadKey().KeyChar;
+                valasz = 'i';
+
+            } while (talalat<5);
+
+            Console.WriteLine($"Sorsolások száma:{sorsolasok}");
+            Console.WriteLine($"Ez években kifejezve:{sorsolasok/52}");
+
+            //Módosítsa úgy a programot, hogy adott számú találatig fusson!
+            //Határozza meg, hogy ez mennyi időbe telt volna.
 
 
 
