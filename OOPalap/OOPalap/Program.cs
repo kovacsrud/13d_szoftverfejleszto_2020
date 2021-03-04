@@ -39,11 +39,15 @@ namespace OOPalap
                 Nev="Zénó",
                 SzuletesiEv=1998,
                 Lakhely="Orosháza",
-                Magassag=177
+                Magassag=245
             };
 
-            Console.WriteLine(zeno.Nev);
+            Console.WriteLine($"{zeno.Nev},{zeno.Magassag}");
 
+            UjEmber zoltan = new UjEmber("Zoltán",1987,176,"Gyula");
+            Console.WriteLine($"{zoltan.Nev},{zoltan.Magassag}");
+
+                       
             
             Console.ReadKey();
         }
