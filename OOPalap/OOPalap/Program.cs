@@ -34,8 +34,15 @@ namespace OOPalap
             elek.Magassag = 189;
             elek.Lakhely = "Makó";
 
+            UjEmber zeno = new UjEmber 
+            {
+                Nev="Zénó",
+                SzuletesiEv=1998,
+                Lakhely="Orosháza",
+                Magassag=177
+            };
 
-
+            Console.WriteLine(zeno.Nev);
 
             
             Console.ReadKey();
