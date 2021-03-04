@@ -47,8 +47,11 @@ namespace OOPalap
             UjEmber zoltan = new UjEmber("Zoltán",1987,176,"Gyula");
             Console.WriteLine($"{zoltan.Nev},{zoltan.Magassag}");
 
-                       
+            Ember2 ember2 = new Ember2("Kiss Elek","Orosháza",1965);
+
             
+
+
             Console.ReadKey();
         }
     }
