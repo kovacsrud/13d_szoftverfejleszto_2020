@@ -27,6 +27,19 @@ namespace Sikidomok
             }
 
             //Mennyi a kerületek átlaga?
+            int osszeg = 0;
+
+            foreach (var i in teglalapok)
+            {
+                osszeg += i.Kerulet();
+            }
+
+            Console.WriteLine($"A kerületek átlaga:{(double)osszeg/teglalapok.Count}");
+
+            var keruletAtlag = teglalapok.Average(x=>x.Kerulet());
+
+            Console.WriteLine($"A kerületek átlaga:{keruletAtlag}");
+
             Console.ReadKey();
         }
     }
