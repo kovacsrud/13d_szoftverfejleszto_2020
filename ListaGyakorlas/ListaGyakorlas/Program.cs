@@ -36,6 +36,11 @@ namespace ListaGyakorlas
 
             Console.WriteLine($"A lista elemszáma:{jarmuvek.Count}");
 
+            foreach (var i in jarmuvek)
+            {
+                Console.WriteLine($"{i.Kategoria},{i.Teljesitmeny},{i.GyartasiEv}");
+            }
+
             Console.ReadKey();
         }
     }
