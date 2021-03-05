@@ -61,9 +61,12 @@ namespace ListaGyakorlas
             JarmuLista(traktorok);
 
             //1990 után gyártott teherautók
-
+            var teherautok = jarmuvek.FindAll(x=>x.Kategoria=="teherautó" && x.GyartasiEv>1990);
+            JarmuLista(teherautok);
 
             //1995 után gyártott személyautók, ahol a teljesítmény 200-nál nagyobb
+            var szemelyautok = jarmuvek.FindAll(x=>x.Kategoria=="személyautó" && x.GyartasiEv>1995 && x.Teljesitmeny>80);
+            JarmuLista(szemelyautok);
 
 
             Console.ReadKey();

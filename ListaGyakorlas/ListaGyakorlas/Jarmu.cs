@@ -11,7 +11,25 @@ namespace ListaGyakorlas
         
 
         public string Kategoria { get; set; }
-        public int Teljesitmeny { get; set; }
+
+        private int teljesitmeny;
+        public int Teljesitmeny {
+            get { return teljesitmeny; }
+            set
+            {
+                if (Kategoria=="személyautó" && value>120)
+                {
+                    teljesitmeny = 120;
+                } else
+                {
+                    teljesitmeny = value;
+                }
+            }
+                
+        
+        }
+            
+        
         public int GyartasiEv { get; set; }
 
         public Jarmu(string kategoria, int teljesitmeny, int gyartasiEv)
