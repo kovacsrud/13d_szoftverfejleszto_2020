@@ -32,6 +32,9 @@ namespace Oroklodes
             //Készítsen egy Nyavog() metódust
             //Írja felül a ToString() metódust, ami az 
             //osztály adatait jelenítse meg!
+            Macska macska = new Macska(2, "macska", 2, "sziámi", "fehér", true);
+            Console.WriteLine(macska.ToString());
+            
 
             Console.ReadKey();
         }
