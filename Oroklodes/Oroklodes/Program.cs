@@ -34,6 +34,29 @@ namespace Oroklodes
             //osztály adatait jelenítse meg!
             Macska macska = new Macska(2, "macska", 2, "sziámi", "fehér", true);
             Console.WriteLine(macska.ToString());
+
+            List<Allat> allatok = new List<Allat>();
+            allatok.Add(kutya);
+            allatok.Add(macska);
+
+            foreach (var i in allatok)
+            {
+                if (i.GetType()==typeof(Kutya))
+                {
+                    Kutya k = (Kutya)i;
+                    k.Ugat();
+                    Console.WriteLine(k.ToString());
+                }
+                if (i.GetType()==typeof(Macska))
+                {
+                    Macska m = (Macska)i;
+                    m.Nyavog();
+                    Console.WriteLine(m.ToString());
+                }
+               
+            }
+       
+
             
 
             Console.ReadKey();
