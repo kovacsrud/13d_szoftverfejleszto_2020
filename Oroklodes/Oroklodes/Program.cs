@@ -25,6 +25,14 @@ namespace Oroklodes
             kutya.Ugat();
             Console.WriteLine(kutya.ToString());
 
+            //Készítsen egy Macska nevű osztályt! Az osztályt
+            //származtassa le az Allat osztályból! 
+            //A macska nevű osztályhoz adja hozzá a 
+            //Fajta, Szin, Szorhossz(rövid/hosszú) propertyket
+            //Készítsen egy Nyavog() metódust
+            //Írja felül a ToString() metódust, ami az 
+            //osztály adatait jelenítse meg!
+
             Console.ReadKey();
         }
     }
