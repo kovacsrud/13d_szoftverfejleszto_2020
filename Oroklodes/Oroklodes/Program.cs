@@ -32,7 +32,7 @@ namespace Oroklodes
             //Készítsen egy Nyavog() metódust
             //Írja felül a ToString() metódust, ami az 
             //osztály adatait jelenítse meg!
-            Macska macska = new Macska(2, "macska", 2, "sziámi", "fehér", true);
+            Macska macska = new Macska(2, "macska", 2, "sziámi", "fehér", true,SzorTipus.rövidszőrű);
             Console.WriteLine(macska.ToString());
 
             List<Allat> allatok = new List<Allat>();
