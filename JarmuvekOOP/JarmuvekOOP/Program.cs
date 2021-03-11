@@ -18,7 +18,7 @@ namespace JarmuvekOOP
             {
                 Hossz=4,
                 Alvazszam="A111B222",
-                Eroforras="benzin",
+                Eroforras=Eroforrasok.benzin,
                 Motorszam="M222B5354",
                 MaximalisSebesseg=150,
                 Szemelyek=5,
@@ -31,7 +31,7 @@ namespace JarmuvekOOP
             {
                 Hossz = 5,
                 Alvazszam = "A112B224",
-                Eroforras = "dízel",
+                Eroforras = Eroforrasok.dízel,
                 Motorszam = "M111B5411",
                 MaximalisSebesseg = 180,
                 Szemelyek = 7,
@@ -44,7 +44,7 @@ namespace JarmuvekOOP
             {
                 MaximalisSebesseg=30,
                 AlkalmazasiTerulet="homlokrakodó",
-                Eroforras="diesel",
+                Eroforras=Eroforrasok.dízel,
                 Hossz=10,
                 IsKozforgalom=true,
                 Teljesitmeny=300,
@@ -55,7 +55,7 @@ namespace JarmuvekOOP
             {
                 MaximalisSebesseg = 10,
                 AlkalmazasiTerulet = "úthenger",
-                Eroforras = "diesel",
+                Eroforras = Eroforrasok.dízel,
                 Hossz = 8,
                 IsKozforgalom = false,
                 Teljesitmeny = 450,
@@ -80,7 +80,7 @@ namespace JarmuvekOOP
                 Console.WriteLine($"{i.MaximalisSebesseg},{i.Eroforras},{i.Tomeg}");
             }
 
-            var tobbSzemely = szemelyszallitok.FindAll(x=>x.Szemelyek>5);
+            var tobbSzemely = szemelyszallitok.FindAll(x=>x.Szemelyek>5 && x.Eroforras==Eroforrasok.dízel);
 
             foreach (var i in tobbSzemely)
             {
