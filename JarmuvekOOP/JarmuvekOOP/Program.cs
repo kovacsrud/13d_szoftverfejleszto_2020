@@ -73,6 +73,42 @@ namespace JarmuvekOOP
             gepjarmuvek.Add(m1);
             gepjarmuvek.Add(m2);
 
+            var mgGyorsabb = munkagepek.FindAll(x => x.MaximalisSebesseg > 10 && x.IsKozforgalom);
+
+            foreach (var i in mgGyorsabb)
+            {
+                Console.WriteLine($"{i.MaximalisSebesseg},{i.Eroforras},{i.Tomeg}");
+            }
+
+            var tobbSzemely = szemelyszallitok.FindAll(x=>x.Szemelyek>5);
+
+            foreach (var i in tobbSzemely)
+            {
+                Console.WriteLine($@"
+                {i.Szemelyek},
+                {i.Teljesitmeny},
+                {i.MaximalisSebesseg},
+                {i.Eroforras}
+                {i.Motorszam}
+                ");
+            }
+
+            var tobb2 = szemelyszallitok.Where(x=>x.Szemelyek>5);
+
+
+            foreach (var i in gepjarmuvek)
+            {
+                if (i.GetType()==typeof(Szemelyszallito))
+                {
+                    Szemelyszallito sz = (Szemelyszallito)i;
+                    if (sz.Szemelyek>5)
+                    {
+                        Console.WriteLine($"{sz.Szemelyek},{sz.MaximalisSebesseg}");
+                    }
+                }
+            }
+            
+
             Console.ReadKey();
         }
     }
