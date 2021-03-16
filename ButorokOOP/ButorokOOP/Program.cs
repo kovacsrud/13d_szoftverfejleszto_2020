@@ -26,7 +26,7 @@ namespace ButorokOOP
             {
                 Suly = 40,
                 JellemzoAnyag = Anyag.fém,
-                KulccsalZarhato = false,
+                KulccsalZarhato = true,
                 MaxMagassag = 150,
                 Uveges = true
             };
@@ -68,6 +68,13 @@ namespace ButorokOOP
             {maxSulySzekreny.Uveges}");
 
             var maxSz = szekrenyek.Find(x=>x.Suly==szekrenyek.Max(y=>y.Suly));
+
+            var kulcsFem = szekrenyek.FindAll(x=>x.KulccsalZarhato && x.Uveges && x.JellemzoAnyag==Anyag.fém);
+
+            foreach (var i in kulcsFem)
+            {
+                Console.WriteLine($"{i.JellemzoAnyag},{i.MaxMagassag},{i.KulccsalZarhato},{i.Uveges}");
+            }
 
             Console.ReadKey();
         }
