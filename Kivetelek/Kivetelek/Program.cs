@@ -16,9 +16,21 @@ namespace Kivetelek
                 int b = 12;
                 int c = a / b;
 
+                try
+                {
+                    throw new ArrayTypeMismatchException();
+                    
+                }
+                catch (FormatException ex)
+                {
+
+                    Console.WriteLine("Beágyazott catch blokk");
+                }
+
                 Console.WriteLine("A művelet eredménye:");
                 Console.WriteLine(c);
-                throw new ArithmeticException("Aritmetikai hiba!");
+                //throw new ArithmeticException("Aritmetikai hiba!");
+                
             }
             catch(DivideByZeroException ex)
             {
