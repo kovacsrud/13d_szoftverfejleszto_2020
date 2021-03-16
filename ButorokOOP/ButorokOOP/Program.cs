@@ -55,7 +55,19 @@ namespace ButorokOOP
             asztalok.Add(a1);
             asztalok.Add(a2);
 
+            //Legnehezebb szekrény adatainak
+            //meghatározása
 
+            var maxSuly = szekrenyek.Max(x=>x.Suly);
+
+            var maxSulySzekreny = szekrenyek.Find(x=>x.Suly==maxSuly);
+
+            Console.WriteLine($@"{maxSulySzekreny.JellemzoAnyag}
+            {maxSulySzekreny.MaxMagassag}
+            {maxSulySzekreny.Suly}
+            {maxSulySzekreny.Uveges}");
+
+            var maxSz = szekrenyek.Find(x=>x.Suly==szekrenyek.Max(y=>y.Suly));
 
             Console.ReadKey();
         }
