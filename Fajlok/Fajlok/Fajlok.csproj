@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{05F28B60-5A7A-42E6-B3F8-30C5F8EA9A1E}</ProjectGuid>
+    <ProjectGuid>{7757CCEC-6712-4448-8066-2785B523541D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Abstract</RootNamespace>
-    <AssemblyName>Abstract</AssemblyName>
+    <RootNamespace>Fajlok</RootNamespace>
+    <AssemblyName>Fajlok</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ember.cs" />
-    <Compile Include="Nyugdijas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sportolo.cs" />
-    <Compile Include="Tanulo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="snooker.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
