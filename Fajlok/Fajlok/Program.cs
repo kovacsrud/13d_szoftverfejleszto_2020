@@ -22,6 +22,21 @@ namespace Fajlok
 
             sr.Close();
 
+            //Betöltés string tömbbe
+            Console.WriteLine("------------------------------");
+
+            var sorok = File.ReadAllLines("snooker.txt",Encoding.Default);
+
+            //for (int i = 1; i < sorok.Length; i++)
+            //{
+            //    Console.WriteLine(sorok[i]);
+            //}
+
+            //Betöltés string változóba
+            var szoveg = File.ReadAllText("snooker.txt", Encoding.Default);
+
+            Console.WriteLine(szoveg);
+
             Console.ReadKey();
         }
     }
