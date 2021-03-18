@@ -49,6 +49,28 @@ namespace FajlokBetolteseKiirasa
                 Console.WriteLine(ex.Message);                
             }
 
+            try
+            {
+                File.WriteAllLines("snooker_copy2.txt",sorok,Encoding.Default);
+                Console.WriteLine("Kiírás kész!");
+                
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+            if (File.Exists("snooker_copy22.txt"))
+            {
+                Console.WriteLine("Létezik");
+            }
+            else
+            {
+                Console.WriteLine("Nem létezik");
+            }
+
+
             Console.ReadKey();
         }
     }
