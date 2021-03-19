@@ -31,6 +31,10 @@ namespace BetoltesFeldolgozas_V2
             //Angol versenyzők adatai
             var angolok = versenyzok.FindAll(x=>x.Orszag=="Anglia");
 
+            //Azok adatait kérdezze le, majd írja fájlba
+            //akiknek a nyereménye nagyobb mint 50.000
+            //Csak a név és a nyeremény kerüljön a fájlba
+
             foreach (var i in angolok)
             {
                 Console.WriteLine($"{i.Orszag},{i.Nev},{i.Helyezes},{i.Nyeremeny}");
@@ -41,16 +45,23 @@ namespace BetoltesFeldolgozas_V2
                 FileStream fajl = new FileStream("angolok.txt",FileMode.Create);
                 StreamWriter wr = new StreamWriter(fajl,Encoding.Default);
 
+                wr.WriteLine("Ország,Név,Helyezés,Nyeremény");
+
                 foreach (var i in angolok)
                 {
                     wr.WriteLine($"{i.Orszag},{i.Nev},{i.Helyezes},{i.Nyeremeny}");
                 }
                 wr.Close();
+                Console.WriteLine("Kiírás kész!");
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);                
             }
+
+            
+
+            
 
             Console.ReadKey();
         }
