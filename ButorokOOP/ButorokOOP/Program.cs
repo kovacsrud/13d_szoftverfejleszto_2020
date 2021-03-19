@@ -76,6 +76,9 @@ namespace ButorokOOP
                 Console.WriteLine($"{i.JellemzoAnyag},{i.MaxMagassag},{i.KulccsalZarhato},{i.Uveges}");
             }
 
+            
+
+            
             Console.ReadKey();
         }
     }
