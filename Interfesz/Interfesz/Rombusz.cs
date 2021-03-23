@@ -10,7 +10,7 @@ namespace Interfesz
     public class Rombusz:ISikidom
     {
 
-        
+        const double RAD = 0.017453292519943;
         public double Oldal { get; set; }
 
         public int Szog { get; set; }
@@ -18,9 +18,10 @@ namespace Interfesz
 
         public Rombusz(double oldal, int szog)
         {
+            
             Oldal = oldal;
             Szog = szog;
-            Magassag = Oldal * Math.Sin(Szog *0.017453292519943);
+            Magassag = Oldal * Math.Sin(Szog * RAD);
         }
 
         public double Kerulet()
