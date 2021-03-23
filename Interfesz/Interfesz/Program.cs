@@ -28,6 +28,17 @@ namespace Interfesz
             sikidomok.Add(k2);
             sikidomok.Add(k3);
 
+            //Síkidomok összes kerülete, területe
+            var osszKerulet = sikidomok.Sum(x=>x.Kerulet());
+            var osszTerulet = sikidomok.Sum(x=>x.Terulet());
+
+            Console.WriteLine($"Az kerületek összege:{osszKerulet}");
+            Console.WriteLine($"A területek összege:{osszTerulet}");
+
+            //Körök kerülete, területe
+
+            var korKerulet = sikidomok.FindAll(x=>x.GetType()==typeof(Kor)).Sum(x=>x.Kerulet());
+
 
 
             Console.ReadKey();
