@@ -30,6 +30,28 @@ namespace HegyekMo
             var atlagMagassag = hegycsucsok.Average(x=>x.Magassag);
             Console.WriteLine($"A hegyek átlagos magassága:{atlagMagassag} m");
 
+            var legMagasabb = hegycsucsok.Find(x=>x.Magassag==hegycsucsok.Max(y=>y.Magassag));
+
+            Console.WriteLine($@"A legmagasabb hegycsúcs:
+            Név:{legMagasabb.HegycsucsNev}
+            Hegység:{legMagasabb.Hegyseg}
+            Magasság:{legMagasabb.Magassag} m");
+
+            Console.Write("Kérek egy magasságot:");
+            var beMagassag = Convert.ToInt32(Console.ReadLine());
+
+            var vaneHegy = hegycsucsok.FindAll(x=>x.Hegyseg=="Börzsöny" && x.Magassag>beMagassag);
+
+            if (vaneHegy.Count>0)
+            {
+                Console.WriteLine($"Van {beMagassag} m-nél magasabb hegycsúcs");
+            } else
+            {
+                Console.WriteLine($"Nincs {beMagassag} m-nél magasabb hegycsúcs");
+            }
+
+
+
             Console.ReadKey();
         }
     }
