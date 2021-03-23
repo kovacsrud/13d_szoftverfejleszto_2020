@@ -50,7 +50,13 @@ namespace HegyekMo
                 Console.WriteLine($"Nincs {beMagassag} m-nél magasabb hegycsúcs");
             }
 
+            //Statisztika
+            var stat = hegycsucsok.ToLookup(x=>x.Hegyseg);
 
+            foreach (var i in stat)
+            {
+                Console.WriteLine($"{i.Key} - {i.Count()} db");
+            }
 
             Console.ReadKey();
         }
