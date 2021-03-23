@@ -58,6 +58,28 @@ namespace HegyekMo
                 Console.WriteLine($"{i.Key} - {i.Count()} db");
             }
 
+            var bukkvidek = hegycsucsok.FindAll(x=>x.Hegyseg=="Bükk-vidék");
+
+            try
+            {
+                FileStream fajl = new FileStream("bukk-videk.txt",FileMode.Create);
+                StreamWriter wr = new StreamWriter(fajl,Encoding.Default);
+
+                wr.WriteLine("Hegycsúcs neve;Magasság láb");
+
+                foreach (var i in bukkvidek)
+                {
+                    wr.WriteLine($"{i.HegycsucsNev};{i.Magassag*3.28:0.#}");
+                }
+
+                wr.Close();
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+
             Console.ReadKey();
         }
     }
