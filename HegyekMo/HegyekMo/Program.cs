@@ -50,6 +50,11 @@ namespace HegyekMo
                 Console.WriteLine($"Nincs {beMagassag} m-nél magasabb hegycsúcs");
             }
 
+            var magasabb = hegycsucsok.FindAll(x=>x.Magassag*3.28>3000).Count;
+
+            Console.WriteLine($"3000 lábnál magasabb {magasabb} db hegycsúcs");
+
+
             //Statisztika
             var stat = hegycsucsok.ToLookup(x=>x.Hegyseg);
 
