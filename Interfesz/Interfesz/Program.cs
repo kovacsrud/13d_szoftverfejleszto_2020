@@ -20,6 +20,10 @@ namespace Interfesz
             Kor k2 = new Kor(19);
             Kor k3 = new Kor(98);
 
+            Rombusz r1 = new Rombusz(12, 30);
+            Rombusz r2 = new Rombusz(39, 26);
+            Rombusz r3 = new Rombusz(51, 39);
+
             sikidomok.Add(t1);
             sikidomok.Add(t2);
             sikidomok.Add(t3);
@@ -27,6 +31,10 @@ namespace Interfesz
             sikidomok.Add(k1);
             sikidomok.Add(k2);
             sikidomok.Add(k3);
+
+            sikidomok.Add(r1);
+            sikidomok.Add(r2);
+            sikidomok.Add(r3);
 
             //Síkidomok összes kerülete, területe
             var osszKerulet = sikidomok.Sum(x=>x.Kerulet());
@@ -42,11 +50,15 @@ namespace Interfesz
 
             var teglalapKerulet = sikidomok.FindAll(x => x.GetType() == typeof(Teglalap)).Average(x=>x.Kerulet());
             Console.WriteLine($"A téglalapok kerülete:{teglalapKerulet}");
-            
+
             //Tetszőleges síkidom megvalósítása
+            var rombuszTerulet = sikidomok.FindAll(x=>x.GetType()==typeof(Rombusz)).Sum(x=>x.Terulet());
+            Console.WriteLine($"A rombuszok területe:{rombuszTerulet}");
+
 
 
             Console.ReadKey();
         }
     }
 }
+
