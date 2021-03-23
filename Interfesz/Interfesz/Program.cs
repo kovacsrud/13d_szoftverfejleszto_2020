@@ -38,7 +38,12 @@ namespace Interfesz
             //Körök kerülete, területe
 
             var korKerulet = sikidomok.FindAll(x=>x.GetType()==typeof(Kor)).Sum(x=>x.Kerulet());
+            Console.WriteLine($"A körök kerülete:{korKerulet}");
 
+            var teglalapKerulet = sikidomok.FindAll(x => x.GetType() == typeof(Teglalap)).Average(x=>x.Kerulet());
+            Console.WriteLine($"A téglalapok kerülete:{teglalapKerulet}");
+            
+            //Tetszőleges síkidom megvalósítása
 
 
             Console.ReadKey();
