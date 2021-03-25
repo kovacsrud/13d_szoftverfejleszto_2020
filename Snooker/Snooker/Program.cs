@@ -11,7 +11,46 @@ namespace Snooker
     {
         static void Main(string[] args)
         {
-           
+            List<Versenyzo> versenyzok = new List<Versenyzo>();
+
+            try
+            {
+                var sorok = File.ReadAllLines("snooker.txt",Encoding.Default);
+                for (int i = 1; i < sorok.Length; i++)
+                {
+                    versenyzok.Add(new Versenyzo(sorok[i], ';'));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+
+            Console.WriteLine($"A világranglistán {versenyzok.Count} versenyző szerepel");
+
+            var atlagNyeremeny = versenyzok.Average(x=>x.Nyeremeny);
+            Console.WriteLine($"Az átlagos nyeremény:{atlagNyeremeny:0.00} font");
+
+            var kinaiak = versenyzok.FindAll(x=>x.Orszag=="Kína");
+
+            var legjobbKinai = kinaiak.Find(x=>x.Nyeremeny==kinaiak.Max(y=>y.Nyeremeny));
+
+            Console.WriteLine($@"A legtöbbet kereső kínai:
+            Név:{legjobbKinai.Nev}
+            Helyezés:{legjobbKinai.Helyezes}
+            Nyeremény:{legjobbKinai.Nyeremeny*380} Ft");
+
+            var norveg = versenyzok.Find(x=>x.Orszag=="Norvégia");
+
+            if (norveg==null)
+            {
+                Console.WriteLine("Nincs norvég versenyző");
+            }else
+            {
+                Console.WriteLine("Van norvég versenyző");
+            }
+
+
 
             Console.ReadKey();
         }
