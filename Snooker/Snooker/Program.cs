@@ -38,7 +38,7 @@ namespace Snooker
             Console.WriteLine($@"A legtöbbet kereső kínai:
             Név:{legjobbKinai.Nev}
             Helyezés:{legjobbKinai.Helyezes}
-            Nyeremény:{legjobbKinai.Nyeremeny*380} Ft");
+            Nyeremény:{legjobbKinai.Nyeremeny*380:n} Ft");
 
             var norveg = versenyzok.Find(x=>x.Orszag=="Norvégia");
 
@@ -50,7 +50,20 @@ namespace Snooker
                 Console.WriteLine("Van norvég versenyző");
             }
 
+            var statisztika = versenyzok.ToLookup(x => x.Orszag).Where(x=>x.Count()>4).OrderByDescending(x=>x.Count());
+            foreach (var i in statisztika)
+            {
+                 Console.WriteLine($"{i.Key} - {i.Count()}");
+                
+            }
 
+            //Mennyi az átlagnyeremény országonként?
+            //foreach (var i in statisztika)
+            //{
+            //    Console.WriteLine($"{i.Key},{i.Average(x=>x.Nyeremeny)}");
+            //}
+
+            //Mennyi a legmagasabb nyeremény az adott országban?
 
             Console.ReadKey();
         }
