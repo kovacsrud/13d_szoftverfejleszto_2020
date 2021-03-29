@@ -64,7 +64,7 @@ namespace Idojaras
 
             foreach (var i in stat2010nap)
             {
-                Console.WriteLine($"{i.Key.Honap}.{i.Key.Nap} - {i.Average(x=>x.Homerseklet)}");
+                Console.WriteLine($"{i.Key.Honap}.{i.Key.Nap} - Átlag:{i.Average(x=>x.Homerseklet):0.0},Min:{i.Min(x=>x.Homerseklet):0.0},Max:{i.Max(x=>x.Homerseklet):0.0}");
             }
 
             Console.ReadKey();
