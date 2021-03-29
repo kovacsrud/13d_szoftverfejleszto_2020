@@ -67,6 +67,47 @@ namespace Idojaras
                 Console.WriteLine($"{i.Key.Honap}.{i.Key.Nap} - Átlag:{i.Average(x=>x.Homerseklet):0.0},Min:{i.Min(x=>x.Homerseklet):0.0},Max:{i.Max(x=>x.Homerseklet):0.0}");
             }
 
+            //Határozzuk meg, az egyes évek átlaghőmérsékletét
+
+            var evekAtlagho = idoAdatok.GroupBy(x=>x.Ev).OrderBy(x=>x.Key);
+
+            foreach (var i in evekAtlagho)
+            {
+                Console.WriteLine($"{i.Key} - {i.Average(x=>x.Homerseklet)}");
+            }
+
+            //Határozzuk meg, az egyes évek hónapjainak átlaghőmérsékletét
+
+            var evekHonapokAtlagho = idoAdatok.GroupBy(x =>new { x.Ev,x.Honap }).OrderBy(x => x.Key.Ev).ThenBy(x=>x.Key.Honap);
+
+            foreach (var i in evekHonapokAtlagho)
+            {
+                Console.WriteLine($"{i.Key.Ev}.{i.Key.Honap} - {i.Average(x => x.Homerseklet)}");
+            }
+
+            try
+            {
+                FileStream fajl = new FileStream("atlagho_statisztika.txt",FileMode.Create);
+                StreamWriter wr = new StreamWriter(fajl,Encoding.Default);
+
+                foreach (var i in evekHonapokAtlagho)
+                {
+                    wr.WriteLine($"{i.Key.Ev};{i.Key.Honap};{i.Average(x=>x.Homerseklet)}");
+                }
+
+                wr.Close();
+                Console.WriteLine("Kiírás kész");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);             
+            }
+
+
+            //Készítsen összesítést, amely évre,hónapra, napra meghatározza az átlagos
+            //szélsebességet, majd az eredményt fájlba írja!
+
             Console.ReadKey();
         }
     }
