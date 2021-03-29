@@ -41,6 +41,32 @@ namespace Idojaras
             Utolsó nap:{utolsoNap.Ev}.{utolsoNap.Honap}.{utolsoNap.Nap} {utolsoNap.Ora}
             ");
 
+            //Mennyi volt 2006-ban az átlaghőmérséklet?
+            var atlagHo2006 = idoAdatok.FindAll(x=>x.Ev==2006).Average(x=>x.Homerseklet);
+
+            Console.WriteLine($"2006 átlaghőmérséklete:{atlagHo2006}");
+
+
+            //Mennyi volt az átlaghőmérséklet 2010-ben havonta?
+
+            var ev2010 = idoAdatok.FindAll(x=>x.Ev==2010);
+
+            var stat2010 = ev2010.ToLookup(x=>x.Honap).OrderBy(x=>x.Key);
+
+            foreach (var i in stat2010)
+            {
+                Console.WriteLine($"Hónap:{i.Key} - Átlag hőmérséklet:{i.Average(x=>x.Homerseklet):0.00}");
+            }
+
+
+            //Mennyi volt az átlaghőmérséklet 2010-ben naponta?
+            var stat2010nap = ev2010.ToLookup(x =>new {x.Honap,x.Nap}).OrderBy(x => x.Key.Honap).ThenBy(x=>x.Key.Nap);
+
+            foreach (var i in stat2010nap)
+            {
+                Console.WriteLine($"{i.Key.Honap}.{i.Key.Nap} - {i.Average(x=>x.Homerseklet)}");
+            }
+
             Console.ReadKey();
         }
     }
