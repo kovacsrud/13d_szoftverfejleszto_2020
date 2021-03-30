@@ -108,6 +108,28 @@ namespace Idojaras
             //Készítsen összesítést, amely évre,hónapra, napra meghatározza az átlagos
             //szélsebességet, majd az eredményt fájlba írja!
 
+            var szeles = idoAdatok.ToLookup(x=>new {x.Ev,x.Honap,x.Nap }).OrderBy(x=>x.Key.Ev).ThenBy(x=>x.Key.Honap).ThenBy(x=>x.Key.Nap);
+
+            try
+            {
+                FileStream fajl = new FileStream("szelsebesseg.txt",FileMode.Create);
+
+                using (StreamWriter wr = new StreamWriter(fajl, Encoding.Default))
+                {
+                    wr.WriteLine("Ev;Honap,Nap,Atlag_Szelsebesseg");
+                    foreach (var i in szeles)
+                    {
+                        wr.WriteLine($"{i.Key.Ev};{i.Key.Honap};{i.Key.Nap};{i.Average(x => x.Szelsebesseg)}");
+                    }
+                }
+                                           
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+
             Console.ReadKey();
         }
     }
