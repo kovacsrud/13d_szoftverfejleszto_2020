@@ -25,6 +25,16 @@ namespace FeluletTeszt
             driver.FindElement(By.LinkText("Programozás")).Click();
             driver.FindElement(By.LinkText("Szoftverfejlesztő (14d13b)")).Click();
 
+            ////*[@id="section-1"]
+            IList<IWebElement> elemek = driver.FindElements(By.XPath("/html/body/div[2]/div/div[4]/div/div/div[2]/div/div[1]/div[2]/ul"));
+
+            Console.WriteLine($"Elemek száma:{elemek.Count}");
+
+            foreach (var i in elemek)
+            {
+                Console.WriteLine(i.Text);
+            }
+
 
             Thread.Sleep(6000);
 
