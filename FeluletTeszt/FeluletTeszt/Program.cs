@@ -22,9 +22,11 @@ namespace FeluletTeszt
             driver.FindElement(By.Id("username")).SendKeys("seleniumtest");
             Thread.Sleep(2000);
             driver.FindElement(By.Id("password")).SendKeys("a1234567"+Keys.Enter);
+            driver.FindElement(By.LinkText("Programozás")).Click();
+            driver.FindElement(By.LinkText("Szoftverfejlesztő (14d13b)")).Click();
 
 
-            //Thread.Sleep(6000);
+            Thread.Sleep(6000);
 
             //driver.Close();
 
