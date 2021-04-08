@@ -41,7 +41,29 @@ namespace csudh
             html += "<TITLE>Domain lista</TITLE>\n";
             html += "</HEAD>\n";
             html += "<BODY>\n";
-            html += "Minta HTML\n";
+            html += "<TABLE>\n";
+            html += "<TR>\n";
+            html += "<TH style='text-align:left'>Ssz</TH>\n";
+            html += "<TH style='text-align:left'>Host domain neve</TH>\n";
+            html += "<TH style='text-align:left'>Host IP címe</TH>\n";
+            for (int i = 1; i < 6; i++)
+            {
+                html += $"<TH style='text-align:left'>{i}.szint</TH>\n";
+            }
+            html += "</TR>\n";
+            foreach (var i in domainek)
+            {
+                html += "<TR>\n";
+                html += $"<TD>{i.DomainName}</TD>\n";
+                html += $"<TD>{i.IpAddress}</TD>\n";
+                for (int j = 1; j < 6; j++)
+                {
+                    html += $"<TD>{i.DomainLevel(j)}</TD>\n";
+                }
+                html += "</TR>\n";
+            }
+            html += "</TABLE>\n";
+
             html += "</BODY>\n";
             html += "</HTML>\n";
 
