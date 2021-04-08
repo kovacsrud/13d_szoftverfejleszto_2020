@@ -36,6 +36,23 @@ namespace csudh
                 Console.WriteLine($"{i}.szint:{elso.DomainLevel(i)}");
             }
 
+            string html = "<HTML>\n";
+            html += "<HEAD>\n";
+            html += "<TITLE>Domain lista</TITLE>\n";
+            html += "</HEAD>\n";
+            html += "<BODY>\n";
+            html += "Minta HTML\n";
+            html += "</BODY>\n";
+            html += "</HTML>\n";
+
+            try
+            {
+                File.WriteAllText("table.html",html);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
             Console.ReadKey();
