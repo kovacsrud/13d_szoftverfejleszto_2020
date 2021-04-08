@@ -19,6 +19,20 @@ namespace WinFormsAlap
 
         private void buttonSzamol_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var a = Convert.ToDouble(textBoxA.Text);
+                var b = Convert.ToDouble(textBoxB.Text);
+
+                var eredmeny = a * b;
+                labelEredmeny.Text = eredmeny.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Számot kell megadni!","Hiba!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            
 
         }
     }
