@@ -73,6 +73,7 @@ namespace csudh
             try
             {
                 File.WriteAllText("table.html",html);
+               
             }
             catch (Exception ex)
             {
