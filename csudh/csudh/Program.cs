@@ -27,6 +27,16 @@ namespace csudh
 
             Console.WriteLine($"3.feladat Domainek száma:{domainek.Count}");
 
+            Console.WriteLine($"5.feladat: Az első domain felépítése");
+
+            var elso = domainek.First();
+
+            for (int i = 1; i < 6; i++)
+            {
+                Console.WriteLine($"{i}.szint:{elso.DomainLevel(i)}");
+            }
+
+
 
             Console.ReadKey();
         }

@@ -21,8 +21,16 @@ namespace csudh
         public string DomainLevel(int level)
         {
             var levels = DomainName.Split('.');
+            Array.Reverse(levels);
 
-            //???
+            if (level>levels.Length)
+            {
+                return "nincs";
+            } else
+            {
+                return levels[level - 1];
+            }
+            
         }
     }
 }
