@@ -51,9 +51,11 @@ namespace csudh
                 html += $"<TH style='text-align:left'>{i}.szint</TH>\n";
             }
             html += "</TR>\n";
+            int sorszam = 1;
             foreach (var i in domainek)
             {
                 html += "<TR>\n";
+                html += $"<TD>{sorszam}.</TD>\n";
                 html += $"<TD>{i.DomainName}</TD>\n";
                 html += $"<TD>{i.IpAddress}</TD>\n";
                 for (int j = 1; j < 6; j++)
@@ -61,6 +63,7 @@ namespace csudh
                     html += $"<TD>{i.DomainLevel(j)}</TD>\n";
                 }
                 html += "</TR>\n";
+                sorszam++;
             }
             html += "</TABLE>\n";
 
