@@ -25,15 +25,18 @@ namespace WpfAppKontenerek
         {
             InitializeComponent();
 
-            for (int i = 0; i < 120; i++)
+            GombCreate(30);
+
+        }
+
+        private void GombCreate(int gombDarab)
+        {
+            for (int i = 0; i < gombDarab; i++)
             {
                 Button gomb = new Button();
-                gomb.Content = $"{i+1}.gomb";
+                gomb.Content = $"{i + 1}.gomb";
                 wrapButtons.Children.Add(gomb);
             }
-            
-            //wrapButtons.Children.Clear();
-
         }
     }
 }
