@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlapok", "WpfAlapok\WpfA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlapok2", "WpfAlapok2\WpfAlapok2.csproj", "{BA16E605-12A4-422F-AE69-891BD08EBFAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppKontenerek", "WpfAppKontenerek\WpfAppKontenerek.csproj", "{AF1F66E6-2DAE-4942-B30A-08AA400BB714}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA16E605-12A4-422F-AE69-891BD08EBFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA16E605-12A4-422F-AE69-891BD08EBFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA16E605-12A4-422F-AE69-891BD08EBFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1F66E6-2DAE-4942-B30A-08AA400BB714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1F66E6-2DAE-4942-B30A-08AA400BB714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1F66E6-2DAE-4942-B30A-08AA400BB714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1F66E6-2DAE-4942-B30A-08AA400BB714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
