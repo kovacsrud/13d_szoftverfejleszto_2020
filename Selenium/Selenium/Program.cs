@@ -19,10 +19,14 @@ namespace Selenium
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.FindElement(By.LinkText("Belépés")).Click();
             driver.FindElement(By.Id("username")).SendKeys("seleniumtest");
+            driver.FindElement(By.Id("password")).SendKeys("a1234567"+Keys.Enter);
+
+            driver.FindElement(By.LinkText("Programozás")).Click();
+            driver.FindElement(By.LinkText("Szoftverfejlesztő (14d13b)")).Click();
 
             Thread.Sleep(5000);
 
-            driver.Close();
+            //driver.Close();
 
             Console.ReadKey();
         }
