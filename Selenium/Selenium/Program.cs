@@ -24,6 +24,16 @@ namespace Selenium
             driver.FindElement(By.LinkText("Programozás")).Click();
             driver.FindElement(By.LinkText("Szoftverfejlesztő (14d13b)")).Click();
 
+            //IList<IWebElement> elemek = driver.FindElements(By.XPath("/html/body/div[2]/div/div[4]/div/div/div[1]/div/div/div/ul/li[2]/div[3]"));
+            IList<IWebElement> elemek = driver.FindElements(By.XPath("//*[@id=\"section-0\"]"));
+            ////*[@id="section-1"]
+            Console.WriteLine($"Elemek száma:{elemek.Count}");
+
+            for (int i = 0; i < elemek.Count; i++)
+            {
+                Console.WriteLine(elemek[i].Text);
+            }
+
             Thread.Sleep(5000);
 
             //driver.Close();
