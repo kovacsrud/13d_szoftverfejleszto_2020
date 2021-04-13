@@ -34,9 +34,11 @@ namespace Selenium
                 Console.WriteLine(elemek[i].Text);
             }
 
-            Thread.Sleep(5000);
+            driver.FindElement(By.LinkText("Kilépés")).Click();
 
-            //driver.Close();
+            Thread.Sleep(8000);
+
+            driver.Close();
 
             Console.ReadKey();
         }
