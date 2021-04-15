@@ -23,6 +23,13 @@ namespace WpfTextbox
         public MainWindow()
         {
             InitializeComponent();
+            textblockHossz.Text = $"A beírt szöveg hossza:{textboxSzoveg.Text.Length}";
+        }
+
+        private void textboxSzoveg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textblockSzoveg.Text = textboxSzoveg.Text;
+            textblockHossz.Text = $"A beírt szöveg hossza:{textboxSzoveg.Text.Length}";
         }
     }
 }
