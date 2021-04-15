@@ -23,6 +23,20 @@ namespace WpfBoxok
         public MainWindow()
         {
             InitializeComponent();
+            List<string> nevek = new List<string>();
+            nevek.Add("Elek");
+            nevek.Add("Ubul");
+            nevek.Add("Zénó");
+            nevek.Add("Ágnes");
+            nevek.Add("Éva");
+            nevek.Add("Jolán");
+
+            comboboxAdatok.ItemsSource = nevek;
+            listboxAdatok.ItemsSource = nevek;
+
+            comboboxAdatok.SelectedItem = "Elek";
+
+            listboxAdatok.SelectedItem = "Jolán";
             
         }
     }
