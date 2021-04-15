@@ -41,5 +41,15 @@ namespace WpfBoxok
             listboxAdatok.SelectedIndex = 3;
             
         }
+
+        private void comboboxAdatok_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            labelFelso.Content = comboboxAdatok.SelectedValue;
+        }
+
+        private void listboxAdatok_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            labelAlso.Content = listboxAdatok.SelectedValue;
+        }
     }
 }
