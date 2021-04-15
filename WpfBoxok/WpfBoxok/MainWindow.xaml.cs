@@ -34,9 +34,11 @@ namespace WpfBoxok
             comboboxAdatok.ItemsSource = nevek;
             listboxAdatok.ItemsSource = nevek;
 
-            comboboxAdatok.SelectedItem = "Elek";
+            //comboboxAdatok.SelectedItem = "Elek";
+            comboboxAdatok.SelectedIndex = 1;
 
             listboxAdatok.SelectedItem = "Jolán";
+            listboxAdatok.SelectedIndex = 3;
             
         }
     }
