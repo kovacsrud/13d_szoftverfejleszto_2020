@@ -29,7 +29,18 @@ namespace WpfTextbox
         private void textboxSzoveg_TextChanged(object sender, TextChangedEventArgs e)
         {
             textblockSzoveg.Text = textboxSzoveg.Text;
+            
             textblockHossz.Text = $"A beírt szöveg hossza:{textboxSzoveg.Text.Length}";
+        }
+
+        private void checkNagybetus_Checked(object sender, RoutedEventArgs e)
+        {
+            textblockSzoveg.Text = textblockSzoveg.Text.ToUpper();
+        }
+
+        private void checkNagybetus_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textblockSzoveg.Text = textblockSzoveg.Text.ToLower();
         }
     }
 }
