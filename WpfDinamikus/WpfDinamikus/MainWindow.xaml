@@ -9,9 +9,11 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <WrapPanel x:Name="wrapGombok" />
-        <TextBlock x:Name="textblockSorszam"  TextAlignment="Center"  FontSize="30" Grid.Row="1" />
+        <WrapPanel x:Name="wrapTextboxok" Grid.Row="1"/>
+        <TextBlock x:Name="textblockSorszam"  TextAlignment="Center"  FontSize="30" Grid.Row="2" />
     </Grid>
 </Window>
