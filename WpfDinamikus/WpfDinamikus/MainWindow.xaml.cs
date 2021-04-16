@@ -25,6 +25,7 @@ namespace WpfDinamikus
         {
             InitializeComponent();
             GombKeszit(88);
+            TbKeszit(40);
         }
 
         private void GombKeszit(int db)
@@ -38,6 +39,24 @@ namespace WpfDinamikus
                 gomb.Click += GombClick;
                 wrapGombok.Children.Add(gomb);
             }
+        }
+
+        private void TbKeszit(int db)
+        {
+            for (int i = 0; i < db; i++)
+            {
+                TextBox tb = new TextBox();
+                tb.Width = 200;
+                tb.TextChanged += TbChange;
+                wrapTextboxok.Children.Add(tb);
+            }
+            
+        }
+            
+        private void TbChange(object sender,TextChangedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            textblockSorszam.Text = tb.Text;
         }
 
         private void GombClick(object sender,RoutedEventArgs e)
