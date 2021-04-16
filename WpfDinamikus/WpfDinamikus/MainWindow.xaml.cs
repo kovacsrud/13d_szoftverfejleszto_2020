@@ -45,11 +45,15 @@ namespace WpfDinamikus
            
             Button gomb = (Button)sender;
             gomb.FontWeight = FontWeights.Bold;
-
+            if (gomb.Foreground==Brushes.Red)
+            {
+                wrapGombok.Children.Remove(gomb);
+            }
             
             gomb.Foreground = Brushes.Red;
             gomb.Background = Brushes.Blue;
-            textblockSorszam.Text = gomb.Content.ToString();
+            textblockSorszam.Text = gomb.Content.ToString().Split('.')[0];
+            
         }
        
     }
