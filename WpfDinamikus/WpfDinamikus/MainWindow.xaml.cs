@@ -34,8 +34,20 @@ namespace WpfDinamikus
                 gomb.Content = $"{i+1}.gomb";
                 gomb.Margin = new Thickness(5);
                 gomb.Width = 100;
+                gomb.Click += GombClick;
                 wrapGombok.Children.Add(gomb);
             }
         }
+
+        private void GombClick(object sender,RoutedEventArgs e)
+        {
+           
+            Button gomb = (Button)sender;
+            gomb.FontWeight = FontWeights.Bold;
+            gomb.Foreground = Brushes.Red;
+            gomb.Background = Brushes.Blue;
+            textblockSorszam.Text = gomb.Content.ToString();
+        }
+       
     }
 }
