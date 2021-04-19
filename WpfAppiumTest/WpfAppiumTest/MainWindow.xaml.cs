@@ -30,7 +30,7 @@ namespace WpfAppiumTest
             try
             {
                 var a = Convert.ToDouble(textboxA.Text);
-                var b = Convert.ToDouble(textboxb.Text);
+                var b = Convert.ToDouble(textboxB.Text);
                 var c = a / b;
                 textblockEredmeny.Text = $"{c:0.00}";
             }

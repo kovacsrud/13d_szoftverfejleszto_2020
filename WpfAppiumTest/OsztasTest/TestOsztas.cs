@@ -26,6 +26,8 @@ namespace OsztasTest
 
         [Test]
         [TestCase(12,6,2)]
+        [TestCase(15, 5, 3)]
+        [TestCase(25, 5, 5)]
         public void OsztasTest(double a,double b,double elvart)
         {
             var aErtek = driver.FindElementByAccessibilityId("textboxA");
