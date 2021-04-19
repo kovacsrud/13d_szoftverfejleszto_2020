@@ -24,5 +24,21 @@ namespace WpfAppiumTest
         {
             InitializeComponent();
         }
+
+        private void buttonSzamol_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var a = Convert.ToDouble(textboxA.Text);
+                var b = Convert.ToDouble(textboxb.Text);
+                var c = a / b;
+                textblockEredmeny.Text = $"{c:0.00}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);           
+            }
+            
+        }
     }
 }

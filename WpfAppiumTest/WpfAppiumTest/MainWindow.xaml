@@ -21,7 +21,7 @@
         <TextBlock Text="B:" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Grid.Row="1"/>
         <TextBox x:Name="textboxA" VerticalAlignment="Center" Width="200" HorizontalAlignment="Center" FontSize="30" Grid.Column="1"/>
         <TextBox x:Name="textboxb" VerticalAlignment="Center" Width="200" HorizontalAlignment="Center" FontSize="30" Grid.Row="1" Grid.Column="1"/>
-        <TextBlock x:Name="textblockEredmeny" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonSzamol" Content="Számolás" Width="200" Height="40" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textblockEredmeny" Width="400" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSzamol" Content="Számolás" Width="200" Height="40" Grid.Row="3" Grid.ColumnSpan="2" Click="buttonSzamol_Click"/>
     </Grid>
 </Window>
