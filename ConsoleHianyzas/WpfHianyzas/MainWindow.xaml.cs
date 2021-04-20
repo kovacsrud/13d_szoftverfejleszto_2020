@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,26 @@ namespace WpfHianyzas
         {
             InitializeComponent();
 
+        }
+
+        private void buttonBetolt_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog()==true)
+            {
+                
+                try
+                {
+                    tanuloAdatok = new TanuloAdatok(dialog.FileName, ';', 1);
+                    datagridHianyzok.ItemsSource = tanuloAdatok.Tanulok;
+                    MessageBox.Show($"Adatok száma:{tanuloAdatok.Tanulok.Count}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);                  
+                }
+
+            }
         }
     }
 }
