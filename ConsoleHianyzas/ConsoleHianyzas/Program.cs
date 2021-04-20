@@ -28,6 +28,30 @@ namespace ConsoleHianyzas
 
             Console.WriteLine($"Adatok száma:{tanulok.Count}");
 
+            Console.WriteLine($"Az összes hiányzás:{tanulok.Sum(x=>x.MulasztottOrak)} óra");
+
+            Console.Write("Adjon meg egy napot(1-30):");
+            var nap = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Adjon meg egy nevet:");
+            var nev = Console.ReadLine();
+            var hianyzott = tanulok.Find(x=>x.Nev==nev);
+
+            if (hianyzott==null)
+            {
+                Console.WriteLine($"{nev} nem hiányzott");
+            } else
+            {
+                Console.WriteLine($"{nev}-nek van hiányzása");
+            }
+
+            if (tanulok.Any(x=>x.Nev==nev))
+            {                
+                Console.WriteLine($"{nev}-nek van hiányzása");
+            } else
+            {
+                Console.WriteLine($"{nev} nem hiányzott");
+            }
+
             Console.ReadKey();
         }
     }
