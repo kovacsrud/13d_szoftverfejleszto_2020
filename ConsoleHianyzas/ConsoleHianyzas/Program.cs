@@ -34,6 +34,7 @@ namespace ConsoleHianyzas
             var nap = Convert.ToInt32(Console.ReadLine());
             Console.Write("Adjon meg egy nevet:");
             var nev = Console.ReadLine();
+
             var hianyzott = tanulok.Find(x=>x.Nev==nev);
 
             if (hianyzott==null)
@@ -50,6 +51,39 @@ namespace ConsoleHianyzas
             } else
             {
                 Console.WriteLine($"{nev} nem hiányzott");
+            }
+
+            var hianyzok = tanulok.FindAll(x=>x.ElsoNap<=nap && x.UtolsoNap>=nap);
+
+            if (hianyzok.Count<1)
+            {
+                Console.WriteLine("Nem volt hiányzó!");
+            } else
+            {
+                foreach (var i in hianyzok)
+                {
+                    Console.WriteLine($"{i.Nev},{i.Osztaly}");
+                }
+            }
+
+            var osszhianyzas = tanulok.ToLookup(x => x.Osztaly).OrderBy(x=>x.Key);
+
+           
+
+            try
+            {
+                FileStream fajl = new FileStream("osszesites.csv", FileMode.Create);
+                StreamWriter wr = new StreamWriter(fajl,Encoding.Default);
+                foreach (var i in osszhianyzas)
+                {
+                    wr.WriteLine($"{i.Key};{i.Sum(x => x.MulasztottOrak)}");
+                }
+                wr.Close();
+                Console.WriteLine("Kiírás kész!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
             }
 
             Console.ReadKey();
