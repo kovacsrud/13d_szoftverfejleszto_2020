@@ -47,5 +47,20 @@ namespace WpfHianyzas
 
             }
         }
+
+        private void buttonNevKeres_Click(object sender, RoutedEventArgs e)
+        {
+            var keresettNev = textboxNev.Text;
+                        
+
+            var eredmenyLista = tanuloAdatok.Tanulok.FindAll(x=>x.Nev==keresettNev);
+            if (eredmenyLista.Count>0)
+            {
+                datagridEredmeny.ItemsSource = eredmenyLista;
+            } else
+            {
+                MessageBox.Show("Nincs a feltételnek megfelelő adat!");
+            }
+        }
     }
 }
