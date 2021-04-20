@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHianyzas", "ConsoleHianyzas\ConsoleHianyzas.csproj", "{B97C4DF7-5C1D-429E-9BE8-12D01BEE4B58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfHianyzas", "WpfHianyzas\WpfHianyzas.csproj", "{7B53A060-7E83-48FE-B2DC-518A0B83382E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B97C4DF7-5C1D-429E-9BE8-12D01BEE4B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97C4DF7-5C1D-429E-9BE8-12D01BEE4B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97C4DF7-5C1D-429E-9BE8-12D01BEE4B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B53A060-7E83-48FE-B2DC-518A0B83382E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B53A060-7E83-48FE-B2DC-518A0B83382E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B53A060-7E83-48FE-B2DC-518A0B83382E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B53A060-7E83-48FE-B2DC-518A0B83382E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
