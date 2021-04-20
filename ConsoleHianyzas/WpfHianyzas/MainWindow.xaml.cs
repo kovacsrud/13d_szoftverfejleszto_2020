@@ -39,6 +39,8 @@ namespace WpfHianyzas
                     tanuloAdatok = new TanuloAdatok(dialog.FileName, ';', 1);
                     datagridHianyzok.ItemsSource = tanuloAdatok.Tanulok;
                     MessageBox.Show($"Adatok száma:{tanuloAdatok.Tanulok.Count}");
+                    tabHianyzok.IsEnabled = true;
+                    tabKereses.IsEnabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -51,9 +53,10 @@ namespace WpfHianyzas
         private void buttonNevKeres_Click(object sender, RoutedEventArgs e)
         {
             var keresettNev = textboxNev.Text;
-                        
+            datagridEredmeny.ItemsSource = null;
+            datagridEredmeny.Items.Clear();
 
-            var eredmenyLista = tanuloAdatok.Tanulok.FindAll(x=>x.Nev==keresettNev);
+            var eredmenyLista = tanuloAdatok.Tanulok.FindAll(x=>x.Nev.ToLower()==keresettNev.ToLower());
             if (eredmenyLista.Count>0)
             {
                 datagridEredmeny.ItemsSource = eredmenyLista;

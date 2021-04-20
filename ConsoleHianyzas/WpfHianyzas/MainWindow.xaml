@@ -11,12 +11,12 @@
             <TabItem Header="Adatok betöltése">
                 <Button x:Name="buttonBetolt" Content="Fájl kiválasztása" Width="200" Height="30" Click="buttonBetolt_Click"/>
             </TabItem>
-            <TabItem Header="Hiányzók">
+            <TabItem x:Name="tabHianyzok" IsEnabled="False" Header="Hiányzók">
                 <Grid>
                     <DataGrid x:Name="datagridHianyzok" ColumnWidth="*"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Keresés név szerint">
+            <TabItem x:Name="tabKereses" IsEnabled="False" Header="Keresés név szerint">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
