@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="Balkezesek" Height="450" Width="800">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Betöltés">
+                <Grid>
+                    <Button x:Name="buttonBetolt" Content="Betöltés" Width="200" Height="30" Click="buttonBetolt_Click" />
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
