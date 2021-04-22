@@ -51,8 +51,11 @@ namespace WpfBalkezesek
 
         private void buttonKeres_Click(object sender, RoutedEventArgs e)
         {
+            datagridNevek.ItemsSource = null;
+            datagridNevek.Items.Clear();
             var keresett = textboxNev.Text;
-            var eredmeny = dobodata.Dobok.FindAll(x=>x.Nev==keresett);
+            //var eredmeny = dobodata.Dobok.FindAll(x=>x.Nev.ToLower()==keresett.ToLower());
+            var eredmeny = dobodata.Dobok.FindAll(x => x.Nev.ToLower().Replace(" ","").Contains(keresett.ToLower().Replace(" ",""))); ;
 
             if (eredmeny.Count==0)
             {
