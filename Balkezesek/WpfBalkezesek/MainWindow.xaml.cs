@@ -36,6 +36,9 @@ namespace WpfBalkezesek
                 try
                 {
                     dobodata = new DoboData(dialog.FileName,1);
+                    tabAdatok.IsEnabled = true;
+                    tabKereso.IsEnabled = true;
+                    datagridAdatok.ItemsSource = dobodata.Dobok;
                     MessageBox.Show($"Adatok száma:{dobodata.Dobok.Count}");
                 }
                 catch (Exception ex)
@@ -44,6 +47,22 @@ namespace WpfBalkezesek
                 }
             }
 
+        }
+
+        private void buttonKeres_Click(object sender, RoutedEventArgs e)
+        {
+            var keresett = textboxNev.Text;
+            var eredmeny = dobodata.Dobok.FindAll(x=>x.Nev==keresett);
+
+            if (eredmeny.Count==0)
+            {
+                MessageBox.Show("Nincs a feltételnek megfelelő adat!");
+            } else
+            {
+                datagridNevek.ItemsSource = eredmeny;
+            }
+
+            
         }
     }
 }

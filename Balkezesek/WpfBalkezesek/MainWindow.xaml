@@ -13,6 +13,26 @@
                     <Button x:Name="buttonBetolt" Content="Betöltés" Width="200" Height="30" Click="buttonBetolt_Click" />
                 </Grid>
             </TabItem>
+            <TabItem IsEnabled="False" x:Name="tabAdatok" Header="Adatok">
+                <Grid>
+                    <DataGrid x:Name="datagridAdatok" ColumnWidth="*"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabKereso" Header="Keresés név szerint" IsEnabled="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textboxNev" Width="200" Height="40" FontSize="18"/>
+                    <Button x:Name="buttonKeres" Content="Keresés" Margin="20" Grid.Column="1" Click="buttonKeres_Click" />
+                    <DataGrid x:Name="datagridNevek" ColumnWidth="*" Grid.Row="1" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
