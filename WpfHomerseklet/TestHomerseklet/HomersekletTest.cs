@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Windows;
 using System;
-
+using System.Diagnostics;
 
 namespace TestHomerseklet
 {
@@ -26,6 +26,11 @@ namespace TestHomerseklet
         }
 
         [Test]
+        [TestCase(3,-16.11)]
+        [TestCase(9, -12.78)]
+        [TestCase(12, -11.11)]
+        [TestCase(58, 14.44)]
+        [TestCase(58, 14.44)]
         public void TestFahrenheitToCelsius(double homerseklet,double elvart)
         {
             var homersekletErtek = driver.FindElementByAccessibilityId("textboxHomerseklet");
@@ -36,7 +41,8 @@ namespace TestHomerseklet
             homersekletErtek.SendKeys(homerseklet.ToString());
             button.Click();
             eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
-            Assert.AreEqual(elvart,Convert.ToDouble(eredmeny.Text));
+            Debug.WriteLine(eredmeny.Text);
+            Assert.AreEqual(elvart,Convert.ToDouble(eredmeny.Text.Replace("C","")));
         }
     }
 }
