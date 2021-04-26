@@ -26,9 +26,17 @@ namespace TestHomerseklet
         }
 
         [Test]
-        public void Test1()
+        public void TestFahrenheitToCelsius(double homerseklet,double elvart)
         {
-            Assert.Pass();
+            var homersekletErtek = driver.FindElementByAccessibilityId("textboxHomerseklet");
+            var eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
+            var button = driver.FindElementByAccessibilityId("buttonSzamol");
+            homersekletErtek.Clear();
+            eredmeny.Clear();
+            homersekletErtek.SendKeys(homerseklet.ToString());
+            button.Click();
+            eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
+            Assert.AreEqual(elvart,Convert.ToDouble(eredmeny.Text));
         }
     }
 }
