@@ -31,7 +31,7 @@
             <RadioButton x:Name="radioCelsius" IsChecked="True" Content="Fahrenheit celsiusra"/>
             <RadioButton x:Name="radioFahrenheit" Content="Celsius fahrenheitre" />
         </StackPanel>
-        <Button x:Name="buttonSzamol" FontSize="18" Width="200" Height="40" Content="Számítás" Grid.Row="4"/>
+        <Button x:Name="buttonSzamol" FontSize="18" Width="200" Height="40" Content="Számítás" Grid.Row="4" Click="buttonSzamol_Click"/>
         <TextBlock x:Name="textblockEredmeny"  VerticalAlignment="Center" FontSize="22" Grid.Row="3" TextAlignment="Center" />
     </Grid>
 </Window>

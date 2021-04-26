@@ -24,5 +24,29 @@ namespace WpfHomerseklet
         {
             InitializeComponent();
         }
+
+        private void buttonSzamol_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var homerseklet = Convert.ToDouble(textboxHomerseklet.Text);
+                if (radioCelsius.IsChecked==true)
+                {
+                    
+                    var celsius = (homerseklet - 32) / 1.8;
+                    textblockEredmeny.Text = $"{celsius:0.00}";
+
+                } else
+                {
+                    var fahrenheit = (homerseklet * 1.8) + 32;
+                    
+                    textblockEredmeny.Text = $"{fahrenheit:0.00}";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hiba!", MessageBoxButton.OK, MessageBoxImage.Error);             
+            }
+        }
     }
 }
