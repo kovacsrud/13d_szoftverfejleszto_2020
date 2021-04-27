@@ -21,5 +21,18 @@ namespace WpfPilotak
                 pilotak.Add(new Pilota(sorok[i],hatarolo));
             }
         }
+
+        public List<int> GetSzuletesiEv()
+        {
+            List<int> evek = new List<int>();
+
+            var evLookup = pilotak.ToLookup(x=>x.SzuletesiDatum.Year).OrderBy(x=>x.Key);
+
+            foreach (var i in evLookup)
+            {
+                evek.Add(i.Key);
+            }
+            return evek;
+        }
     }
 }

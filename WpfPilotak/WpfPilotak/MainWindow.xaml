@@ -9,7 +9,7 @@
     <Grid>
         <TabControl>
             <TabItem Header="Fájl betöltés">
-                <Button x:Name="buttonBetolt" Width="200" Height="30" Content="Fájl kiválasztása" />
+                <Button x:Name="buttonBetolt" Width="200" Height="30" Content="Fájl kiválasztása" Click="buttonBetolt_Click" />
             </TabItem>
             <TabItem x:Name="tabSzuletes" IsEnabled="False" Header="Keresés születési év szerint">
                 <Grid>
@@ -17,7 +17,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
-                    <ComboBox x:Name="comboboxEvek" Width="200" Height="40" FontSize="16" />
+                    <ComboBox x:Name="comboboxEvek" Width="200" Height="40" FontSize="16" SelectionChanged="comboboxEvek_SelectionChanged" />
                     <DataGrid x:Name="datagridEvek" ColumnWidth="*" Grid.Row="1"/>
                 </Grid>
             </TabItem>
