@@ -39,10 +39,31 @@ namespace TestHomerseklet
             homersekletErtek.Clear();
             eredmeny.Clear();
             homersekletErtek.SendKeys(homerseklet.ToString());
+            driver.FindElementByAccessibilityId("radioCelsius").Click();
             button.Click();
             eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
             Debug.WriteLine(eredmeny.Text);
             Assert.AreEqual(elvart,Convert.ToDouble(eredmeny.Text.Replace("C","")));
+        }
+
+        [Test]
+        [TestCase(14.44,58)]
+        [TestCase(14.44, 58)]
+        [TestCase(12.78,55)]
+        [TestCase(13.33,56)]
+        [TestCase(11.11,52)]
+        public void TestCelsiusToFahrenheit(double homerseklet,double elvart)
+        {
+            var homersekletErtek = driver.FindElementByAccessibilityId("textboxHomerseklet");
+            var eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
+            var button = driver.FindElementByAccessibilityId("buttonSzamol");
+            homersekletErtek.Clear();
+            eredmeny.Clear();
+            homersekletErtek.SendKeys(homerseklet.ToString());
+            driver.FindElementByAccessibilityId("radioFahrenheit").Click();
+            button.Click();
+            eredmeny = driver.FindElementByAccessibilityId("textblockEredmeny");
+            Assert.AreEqual(elvart,Convert.ToDouble(eredmeny.Text.Replace("F","")),0.02);
         }
     }
 }
