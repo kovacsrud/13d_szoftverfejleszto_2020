@@ -39,11 +39,29 @@ namespace WpfEU
                     orszaglista = new Orszaglista(dialog.FileName,';');
                     MessageBox.Show($"Adatok száma:{orszaglista.Orszagok.Count}");
                     datagridOrszagok.ItemsSource = orszaglista.Orszagok;
+                    tabUjOrszag.IsEnabled = true;
+                    calendar.SelectedDate = DateTime.Now;
+                   
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);                  
                 }
+            }
+        }
+
+        private void buttonUjadat_Click(object sender, RoutedEventArgs e)
+        {
+            if (textboxOrszag.Text.Length>2 && calendar.SelectedDate!=null)
+            {
+                orszaglista.UjOrszag(calendar.SelectedDate,textboxOrszag.Text);
+                datagridOrszagok.Items.Refresh();
+                //Fájl megnyitása bővítésre
+                MessageBox.Show("Adatfelvitel sikeres");
+                
+            } else
+            {
+                MessageBox.Show("Nem megfelelő adat!");
             }
         }
     }

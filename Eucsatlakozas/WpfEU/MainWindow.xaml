@@ -18,7 +18,14 @@
             </TabItem>
             <TabItem x:Name="tabUjOrszag" IsEnabled="False" Header="Új ország felvitele">
                 <Grid>
-                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="textboxOrszag" Width="400" Height="30" FontSize="20"/>
+                    <Calendar x:Name="calendar" Grid.Row="1" />
+                    <Button x:Name="buttonUjadat" Content="Új adat rögzítése" Width="200" Height="30" Grid.Row="2" Click="buttonUjadat_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

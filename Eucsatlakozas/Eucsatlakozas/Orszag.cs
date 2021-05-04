@@ -17,5 +17,22 @@ namespace Eucsatlakozas
             Orszagnev = e[0];
             Csatlakozas = DateTime.Parse(e[1]);
         }
+
+        public Orszag(string orszagnev, DateTime? csatlakozas)
+        {
+            Orszagnev = orszagnev;
+
+            if (csatlakozas!=null)
+            {
+                Csatlakozas = (DateTime)csatlakozas;
+            } else
+            {
+                Csatlakozas = DateTime.Now;
+
+            }
+            
+            
+            
+        }
     }
 }

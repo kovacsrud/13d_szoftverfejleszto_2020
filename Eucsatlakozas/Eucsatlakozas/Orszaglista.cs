@@ -22,9 +22,10 @@ namespace Eucsatlakozas
             }
         }
 
-        public void UjOrszag(Orszag orszag)
+        public void UjOrszag(DateTime? datum,string orszag)
         {
-            orszagok.Add(orszag);
+
+            orszagok.Add(new Orszag(orszag,datum));
         }
 
     }
