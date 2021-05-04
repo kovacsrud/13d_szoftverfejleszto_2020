@@ -22,5 +22,10 @@ namespace Eucsatlakozas
             }
         }
 
+        public void UjOrszag(Orszag orszag)
+        {
+            orszagok.Add(orszag);
+        }
+
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eucsatlakozas", "Eucsatlakozas\Eucsatlakozas.csproj", "{02EBF9E4-CD28-49DF-841D-FC469771E56F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEU", "WpfEU\WpfEU.csproj", "{2D676E4D-EFD0-426C-929C-F3C0FCD16205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{02EBF9E4-CD28-49DF-841D-FC469771E56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02EBF9E4-CD28-49DF-841D-FC469771E56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02EBF9E4-CD28-49DF-841D-FC469771E56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D676E4D-EFD0-426C-929C-F3C0FCD16205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D676E4D-EFD0-426C-929C-F3C0FCD16205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D676E4D-EFD0-426C-929C-F3C0FCD16205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D676E4D-EFD0-426C-929C-F3C0FCD16205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
