@@ -35,6 +35,7 @@ namespace TestHomerseklet
         public void ReportSetup()
         {
             extReport = new ExtentReports();
+            
             var htmlReporter = new ExtentHtmlReporter(@"g:\13d_extrep\");
             extReport.AddSystemInfo("Homerseklet teszt","Auto test");
             extReport.AddSystemInfo("Tesztelõ:","KR");
@@ -104,14 +105,16 @@ namespace TestHomerseklet
                 var ho = TestContext.CurrentContext.Test.Arguments.GetValue(0);
                 var elvart = TestContext.CurrentContext.Test.Arguments.GetValue(1);
                 string fajlnev = "test_"+ho+"_"+elvart;
-                //string fajlnev = $"test_{ho}_{}";
+                
                 Screenshot screenshot = shot.GetScreenshot();
-                //screenshot.SaveAsFile(@"g\:13d_extrep\"+fajlnev+".png",ScreenshotImageFormat.Png);
-                screenshot.SaveAsFile(fajlnev + ".png", ScreenshotImageFormat.Png);
+                screenshot.SaveAsFile(@"G:\13d_extrep\"+fajlnev+".png",ScreenshotImageFormat.Png);
+                //screenshot.SaveAsFile(fajlnev + ".png", ScreenshotImageFormat.Png);
+     
 
                 extTest.Log(Status.Fail,"Hiba!");
                 extTest.Log(Status.Fail, message);
                 extTest.Log(Status.Fail, stacktrace);
+                extTest.Log(Status.Fail, "Kép:");
                 extTest.AddScreenCaptureFromPath(fajlnev+".png");
             }
 
