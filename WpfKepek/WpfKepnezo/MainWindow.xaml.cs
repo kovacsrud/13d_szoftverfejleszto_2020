@@ -54,9 +54,7 @@ namespace WpfKepnezo
             Image image = (Image)sender;
             KepWin kepwin = new KepWin(image);
             kepwin.Title = image.Source.ToString();
-            Debug.WriteLine($"{image.Source.Width},{image.Source.Height}");
-            Debug.WriteLine($"{image.ActualWidth},{image.ActualHeight}");
-
+            
             kepwin.Width = image.Source.Width;
             kepwin.Height = image.Source.Height;
             
