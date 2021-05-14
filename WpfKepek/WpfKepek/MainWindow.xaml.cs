@@ -24,16 +24,28 @@ namespace WpfKepek
         public MainWindow()
         {
             InitializeComponent();
-            kep2.Source = new BitmapImage(new Uri(@"g:\tavtanitas\13dcsharp\000046.jpg"));
-            //kep2.Source = new BitmapImage(new Uri("000046.jpg"));
+            //kep2.Source = new BitmapImage(new Uri(@"g:\tavtanitas\13dcsharp\000046.jpg"));
+            kep2.Source = new BitmapImage(new Uri("000046.jpg",UriKind.RelativeOrAbsolute));
+            
+
         }
 
         private void buttonBetolt_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "jpg képek(*.jpg)|*.jpg|minden fájl(*.*)|*.*";
+
             if (dialog.ShowDialog()==true)
             {
-                kep2.Source = new BitmapImage(new Uri(dialog.FileName));
+                if (radiokep1.IsChecked==true)
+                {
+                    kep.Source = new BitmapImage(new Uri(dialog.FileName));
+                } else
+                {
+                    kep2.Source = new BitmapImage(new Uri(dialog.FileName));
+                }
+
+                
             }
 
         }

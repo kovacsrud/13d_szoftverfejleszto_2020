@@ -98,9 +98,9 @@
     <Resource Include="000021.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="000046.jpg">
+    <Resource Include="000046.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

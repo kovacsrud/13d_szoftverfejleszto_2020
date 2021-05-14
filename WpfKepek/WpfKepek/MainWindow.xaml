@@ -15,6 +15,10 @@
         </Grid.RowDefinitions>
         <Image x:Name="kep" Source="000021.jpg" />
         <Image x:Name="kep2" Grid.Row="1" />
-        <Button x:Name="buttonBetolt" Content="Tallózás" Grid.Row="2" Width="200" Height="30" Click="buttonBetolt_Click" />
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
+            <RadioButton x:Name="radiokep1" Content="Kép 1" IsChecked="True"/>
+            <RadioButton x:Name="radiokep2" Content="Kép 2"/>
+        </WrapPanel>
+        <Button x:Name="buttonBetolt" Content="Tallózás" Grid.Row="3" Width="200" Height="30" Click="buttonBetolt_Click" />
     </Grid>
 </Window>
