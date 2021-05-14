@@ -108,7 +108,7 @@ namespace TestHomerseklet
                 
                 Screenshot screenshot = shot.GetScreenshot();
                 screenshot.SaveAsFile(@"G:\13d_extrep\"+fajlnev+".png",ScreenshotImageFormat.Png);
-                //screenshot.SaveAsFile(fajlnev + ".png", ScreenshotImageFormat.Png);
+                
      
 
                 extTest.Log(Status.Fail,"Hiba!");
