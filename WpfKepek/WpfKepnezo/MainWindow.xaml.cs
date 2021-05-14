@@ -40,11 +40,23 @@ namespace WpfKepnezo
                     var bitmap = new BitmapImage(new Uri(dialog.FileNames[i]));
                     image.Source = bitmap;
                     image.Width = 200;
+                    image.MouseLeftButtonDown += KepClick;
                     wrappanelKepek.Children.Add(image);
                 }
             }
 
 
+        }
+
+        public void KepClick(object sender,RoutedEventArgs e)
+        {
+            Image image = (Image)sender;
+            KepWin kepwin = new KepWin(image);
+            kepwin.Title = image.Source.ToString();
+            kepwin.Width = image.Width;
+            kepwin.Height = image.Height;
+            kepwin.ShowDialog();
+            
         }
     }
 }
