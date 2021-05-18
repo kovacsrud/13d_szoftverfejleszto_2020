@@ -50,6 +50,11 @@ namespace KaracsonyCLI
                 szam = Convert.ToInt32(Console.ReadLine());
             }
             var adottNap = napimunkak.Find(x=>x.Nap==szam);
+            Console.WriteLine($@"Ennyi dísz maradt készleten:
+            Fenyőfa: {adottNap.FenyofaKesz-adottNap.FenyofaEladott}
+            Angyalka: {adottNap.AngyalkaKesz-adottNap.AngyalkaEladott}
+            Harang: {adottNap.HarangKesz-adottNap.HarangEladott}    
+            ");
 
 
 
