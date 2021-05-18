@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfKepek", "WpfKepek\WpfKepek.csproj", "{301975B5-C2DB-42BC-83EB-B7D5CDAFBBDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfKepnezo", "WpfKepnezo\WpfKepnezo.csproj", "{56C3035B-9159-4D1F-BEB0-5D0A036B2041}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{301975B5-C2DB-42BC-83EB-B7D5CDAFBBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301975B5-C2DB-42BC-83EB-B7D5CDAFBBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301975B5-C2DB-42BC-83EB-B7D5CDAFBBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301975B5-C2DB-42BC-83EB-B7D5CDAFBBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C3035B-9159-4D1F-BEB0-5D0A036B2041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C3035B-9159-4D1F-BEB0-5D0A036B2041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C3035B-9159-4D1F-BEB0-5D0A036B2041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C3035B-9159-4D1F-BEB0-5D0A036B2041}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C918EACC-49CF-47DD-B6D1-25A6424582E7}
+	EndGlobalSection
+EndGlobal

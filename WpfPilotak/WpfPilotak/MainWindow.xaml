@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfPilotak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPilotak"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Fájl betöltés">
+                <Button x:Name="buttonBetolt" Width="200" Height="30" Content="Fájl kiválasztása" Click="buttonBetolt_Click" />
+            </TabItem>
+            <TabItem x:Name="tabSzuletes" IsEnabled="False" Header="Keresés születési év szerint">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <ComboBox x:Name="comboboxEvek" Width="200" Height="40" FontSize="16" SelectionChanged="comboboxEvek_SelectionChanged" />
+                    <DataGrid x:Name="datagridEvek" ColumnWidth="*" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfKepnezo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKepnezo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="325*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <WrapPanel x:Name="wrappanelKepek"/>
+        </ScrollViewer>
+        <Button x:Name="buttonBetolt" Content="Képek választása" Width="300" Height="30" Grid.Row="1" Click="buttonBetolt_Click"/>
+    </Grid>
+</Window>

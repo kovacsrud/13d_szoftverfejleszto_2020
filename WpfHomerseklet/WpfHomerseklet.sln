@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfHomerseklet", "WpfHomerseklet\WpfHomerseklet.csproj", "{56C7DE05-51F3-4E62-8380-E70E516F31A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHomerseklet", "TestHomerseklet\TestHomerseklet.csproj", "{B9BBA64C-EA3F-46D1-B2B5-F44F9ED1738F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56C7DE05-51F3-4E62-8380-E70E516F31A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C7DE05-51F3-4E62-8380-E70E516F31A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C7DE05-51F3-4E62-8380-E70E516F31A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C7DE05-51F3-4E62-8380-E70E516F31A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BBA64C-EA3F-46D1-B2B5-F44F9ED1738F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BBA64C-EA3F-46D1-B2B5-F44F9ED1738F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BBA64C-EA3F-46D1-B2B5-F44F9ED1738F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BBA64C-EA3F-46D1-B2B5-F44F9ED1738F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D1180D0-7B59-46B9-8361-6740709AC635}
+	EndGlobalSection
+EndGlobal
