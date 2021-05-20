@@ -80,8 +80,26 @@ namespace KaracsonyCLI
                 }
             }
 
+            try
+            {
+                FileStream fajl = new FileStream("bevetel.txt",FileMode.Create);
+                StreamWriter wr = new StreamWriter(fajl, Encoding.Default);
 
-            Console.WriteLine(osszFenyo);
+                foreach (var i in napimunkak)
+                {
+                    if (i.NapiBevetel()>=10000)
+                    {
+                        wr.WriteLine($"{i.Nap}:{i.NapiBevetel()}");
+                    }
+                }
+                wr.Close();
+                Console.WriteLine("Fájba írás kész");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);                
+            }
+            
             
 
 
