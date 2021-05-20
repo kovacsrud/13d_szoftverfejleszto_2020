@@ -23,7 +23,24 @@ namespace WpfAngyal
         public MainWindow()
         {
             InitializeComponent();
+
+            for (int i = 1; i < 41; i++)
+            {
+                comboboxNapok.Items.Add(i);
+            }
+            textboxEladott.Text = "0";
+            textboxElkeszitett.Text = "0";
             
+        }
+
+        private void ButtonHozzaad_Click(object sender, RoutedEventArgs e)
+        {
+            var nap = comboboxNapok.SelectedValue.ToString();
+            var elkeszitett = Convert.ToInt32(textboxElkeszitett.Text);
+            var eladott = Convert.ToInt32(textboxEladott.Text);
+            var maradt = elkeszitett - eladott;
+
+            listboxAdatok.Items.Add($"{nap}.nap +{elkeszitett} -{eladott}={maradt}");
         }
     }
 }
