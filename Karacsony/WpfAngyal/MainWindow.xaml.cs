@@ -40,7 +40,27 @@ namespace WpfAngyal
             var eladott = Convert.ToInt32(textboxEladott.Text);
             var maradt = elkeszitett - eladott;
 
-            listboxAdatok.Items.Add($"{nap}.nap +{elkeszitett} -{eladott}={maradt}");
+            if (eladott < 0 || elkeszitett < 0)
+            {
+                textblockHiba.Text = "Negatív számot nem adhat meg!";
+            } else if (elkeszitett+maradt<eladott) {
+
+                textblockHiba.Text = "Túl sok az eladott angyalka";
+            }
+            else
+            {
+                listboxAdatok.Items.Add($"{nap}.nap +{elkeszitett} -{eladott}={maradt}");
+
+                for (int i = Convert.ToInt32(nap); i > 0; i--)
+                {
+                    comboboxNapok.Items.Remove(i);
+                }
+
+            }
+
+            
+
+
         }
     }
 }
