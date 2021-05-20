@@ -84,14 +84,16 @@ namespace KaracsonyCLI
             {
                 FileStream fajl = new FileStream("bevetel.txt",FileMode.Create);
                 StreamWriter wr = new StreamWriter(fajl, Encoding.Default);
-
+                int szamlalo = 0;
                 foreach (var i in napimunkak)
                 {
                     if (i.NapiBevetel()>=10000)
                     {
                         wr.WriteLine($"{i.Nap}:{i.NapiBevetel()}");
+                        szamlalo++;
                     }
                 }
+                wr.WriteLine($"{szamlalo} napon volt legalább 10000Ft a bevétel");
                 wr.Close();
                 Console.WriteLine("Fájba írás kész");
             }
