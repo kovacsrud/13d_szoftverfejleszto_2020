@@ -28,6 +28,7 @@ namespace WpfAngyal
             {
                 comboboxNapok.Items.Add(i);
             }
+            comboboxNapok.SelectedIndex = 0;
             textboxEladott.Text = "0";
             textboxElkeszitett.Text = "0";
             
@@ -55,6 +56,7 @@ namespace WpfAngyal
                 {
                     comboboxNapok.Items.Remove(i);
                 }
+                comboboxNapok.SelectedIndex = 0;
 
             }
 
