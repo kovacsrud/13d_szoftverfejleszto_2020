@@ -56,6 +56,33 @@ namespace KaracsonyCLI
             Harang: {adottNap.HarangKesz-adottNap.HarangEladott}    
             ");
 
+            List<int> osszdarabok = new List<int>();
+            List<string> disznevek = new List<string>();
+
+            var osszFenyo = Math.Abs(napimunkak.Sum(x => x.FenyofaEladott));
+            osszdarabok.Add(osszFenyo);
+            disznevek.Add("fenyőfa");
+            var osszHarang = Math.Abs(napimunkak.Sum(x=>x.HarangEladott));
+            osszdarabok.Add(osszHarang);
+            disznevek.Add("harang");
+            var osszAngyal = Math.Abs(napimunkak.Sum(x => x.AngyalkaEladott));
+            osszdarabok.Add(osszAngyal);
+            disznevek.Add("angyal");
+
+            var maxEladott = osszdarabok.Max();
+
+            for (int i = 0; i < osszdarabok.Count; i++)
+            {
+                if (osszdarabok[i]==maxEladott)
+                {
+                    Console.WriteLine($"Dísz:{disznevek[i]}," +
+                        $"eladott darab:{osszdarabok[i]}");
+                }
+            }
+
+
+            Console.WriteLine(osszFenyo);
+            
 
 
 
