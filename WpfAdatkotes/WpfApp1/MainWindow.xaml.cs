@@ -20,20 +20,19 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        KutyafajtaLista kutyafajtalista;
-        KutyanevLista kutyanevlista;
+        Kutyamodell kutyamodell;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            kutyafajtalista = new KutyafajtaLista("kutyafajtak.csv");
-            kutyanevlista = new KutyanevLista("Kutyanevek.csv");
+            kutyamodell = new Kutyamodell();
+            DataContext = kutyamodell;           
+            
 
             //datagridFajtak.ItemsSource = kutyafajtalista.Kutyafajtak;
             //datagridNevek.ItemsSource = kutyanevlista.Kutyanevek;
-            datagridFajtak.DataContext = kutyafajtalista;
-            datagridNevek.DataContext = kutyanevlista;
+            //datagridFajtak.DataContext = kutyafajtalista;
+            //datagridNevek.DataContext = kutyanevlista;
 
         }
     }

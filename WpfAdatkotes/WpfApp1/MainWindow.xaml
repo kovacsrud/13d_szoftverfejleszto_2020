@@ -9,7 +9,7 @@
     <Grid>
         <TabControl>
             <TabItem Header="Kutyanevek">
-                <DataGrid x:Name="datagridNevek" ItemsSource="{Binding Kutyanevek}" AutoGenerateColumns="False" ColumnWidth="*">
+                <DataGrid x:Name="datagridNevek" ItemsSource="{Binding kutyanevlista.Kutyanevek}" AutoGenerateColumns="False" ColumnWidth="*">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Kutyanév" Binding="{Binding Kutyaneve}" />
                     </DataGrid.Columns>
@@ -17,7 +17,7 @@
 
             </TabItem>
             <TabItem Header="Kutyafajták">
-                <DataGrid x:Name="datagridFajtak" ItemsSource="{Binding Kutyafajtak}" AutoGenerateColumns="False" ColumnWidth="*">
+                <DataGrid x:Name="datagridFajtak" ItemsSource="{Binding kutyafajtalista.Kutyafajtak}" AutoGenerateColumns="False" ColumnWidth="*">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Fajta neve" Binding="{Binding Fajtanev}" />
                         <DataGridTextColumn Header="Fajta eredeti neve" Binding="{Binding FajtaEredetinev}" />

@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Kutyafajta.cs" />
     <Compile Include="KutyafajtaLista.cs" />
+    <Compile Include="Kutyamodell.cs" />
     <Compile Include="Kutyanev.cs" />
     <Compile Include="KutyanevLista.cs" />
     <Compile Include="MainWindow.xaml.cs">
